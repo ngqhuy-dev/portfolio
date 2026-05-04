@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Person 1",
+    "role": "Teammate",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=1",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 2",
+    "role": "Mentor",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=2",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 3",
+    "role": "Teammate",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=3",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 4",
+    "role": "Mentor",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=4",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 5",
+    "role": "Teammate",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=5",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 6",
+    "role": "Mentor",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=6",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 7",
+    "role": "Teammate",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=7",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  },
+  {
+    "name": "Person 8",
+    "role": "Mentor",
+    "company": "University Lab",
+    "avatar": "https://i.pravatar.cc/100?img=8",
+    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+  }
+]

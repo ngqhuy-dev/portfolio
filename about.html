@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Student Portfolio Starter</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <nav>
+      <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="portfolio.html" class="">Portfolio</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="resume.html" class="">Resume</a></li>
+          <li><a href="testimonials.html" class="">Testimonials</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+<main>
+  <div class="container">
+
+<section class="profile">
+  <div class="card">
+    <img src="https://picsum.photos/600/400?random=1" alt="Portrait" />
+  </div>
+  <div>
+    <h1>About Me</h1>
+    <p>Hello! I'm <strong>Alex Student</strong>, a developer/designer passionate about building usable and beautiful products. This starter exists to help students showcase their work quickly.</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Skills</h3>
+        <div class="badge">HTML</div>
+        <div class="badge">CSS</div>
+        <div class="badge">JavaScript</div>
+        <div class="badge">React</div>
+        <div class="badge">Figma</div>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li><strong>BSc Computer Science</strong> — 2022–2026</li>
+          <li><strong>Design Minor</strong> — 2023–2026</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+.testimonial{display:flex;gap:12px;}.avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;}.quote{color:var(--muted);}@media (max-width:720px){.testimonial{align-items:flex-start;}.avatar{width:48px;height:48px;}.quote{font-size:15px;}}

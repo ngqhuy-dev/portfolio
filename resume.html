@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume • Student Portfolio Starter</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/resume.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <nav>
+      <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="about.html" class="">About</a></li>
+          <li><a href="portfolio.html" class="">Portfolio</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="testimonials.html" class="">Testimonials</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+<main>
+  <div class="container">
+
+<section>
+  <h1>Resume</h1>
+  <div class="resume-grid">
+    <div class="card">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> alex@example.com</p>
+      <p><strong>Location:</strong> Vancouver, BC</p>
+      <p><a class="btn" href="#">Download PDF</a></p>
+    </div>
+    <div>
+      <div class="resume-section card">
+        <h3>Experience</h3>
+        <p><strong>Front-end Intern</strong> — 2024<br/>Helped ship components, fixed bugs, wrote docs.</p>
+        <p><strong>Design Research Assistant</strong> — 2023<br/>Interviewed users, synthesized insights.</p>
+      </div>
+      <div class="resume-section card">
+        <h3>Education</h3>
+        <p>BSc Computer Science, 2022–2026</p>
+      </div>
+      <div class="resume-section card">
+        <h3>Skills</h3>
+        <div class="badge">HTML</div><div class="badge">CSS</div><div class="badge">JS</div>
+        <div class="badge">React</div><div class="badge">Node</div><div class="badge">Figma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

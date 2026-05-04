@@ -1,0 +1,1 @@
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}.project-card h3{margin:8px 0 6px;}.project-card .meta{color:var(--muted);font-size:14px;}@media (max-width:720px){.filters{gap:6px;}.project-card .meta{font-size:13px;}}

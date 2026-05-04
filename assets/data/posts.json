@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Learning Note 1: Tips for Students",
+    "date": "2025-02-02",
+    "author": "Alex Student",
+    "tags": [
+      "frontend",
+      "design",
+      "ux"
+    ],
+    "hero": "https://picsum.photos/seed/b1/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Learning Note 2: Tips for Students",
+    "date": "2025-03-03",
+    "author": "Alex Student",
+    "tags": [
+      "study",
+      "portfolio",
+      "career"
+    ],
+    "hero": "https://picsum.photos/seed/b2/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Learning Note 3: Tips for Students",
+    "date": "2025-04-04",
+    "author": "Alex Student",
+    "tags": [
+      "frontend",
+      "design",
+      "ux"
+    ],
+    "hero": "https://picsum.photos/seed/b3/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Learning Note 4: Tips for Students",
+    "date": "2025-05-05",
+    "author": "Alex Student",
+    "tags": [
+      "study",
+      "portfolio",
+      "career"
+    ],
+    "hero": "https://picsum.photos/seed/b4/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Learning Note 5: Tips for Students",
+    "date": "2025-06-06",
+    "author": "Alex Student",
+    "tags": [
+      "frontend",
+      "design",
+      "ux"
+    ],
+    "hero": "https://picsum.photos/seed/b5/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Learning Note 6: Tips for Students",
+    "date": "2025-07-07",
+    "author": "Alex Student",
+    "tags": [
+      "study",
+      "portfolio",
+      "career"
+    ],
+    "hero": "https://picsum.photos/seed/b6/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Learning Note 7: Tips for Students",
+    "date": "2025-08-08",
+    "author": "Alex Student",
+    "tags": [
+      "frontend",
+      "design",
+      "ux"
+    ],
+    "hero": "https://picsum.photos/seed/b7/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Learning Note 8: Tips for Students",
+    "date": "2025-09-09",
+    "author": "Alex Student",
+    "tags": [
+      "study",
+      "portfolio",
+      "career"
+    ],
+    "hero": "https://picsum.photos/seed/b8/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Learning Note 9: Tips for Students",
+    "date": "2025-10-01",
+    "author": "Alex Student",
+    "tags": [
+      "frontend",
+      "design",
+      "ux"
+    ],
+    "hero": "https://picsum.photos/seed/b9/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Learning Note 10: Tips for Students",
+    "date": "2025-11-02",
+    "author": "Alex Student",
+    "tags": [
+      "study",
+      "portfolio",
+      "career"
+    ],
+    "hero": "https://picsum.photos/seed/b10/900/500",
+    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "content": [
+      "Start with a clear goal for each project: what skill are you demonstrating?",
+      "Document your process with screenshots and notes as you go.",
+      "Reflect on outcomes: what did you learn and what would you improve?"
+    ]
+  }
+]

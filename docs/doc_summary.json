@@ -1,0 +1,11 @@
+{
+  "web_root": "/mnt/data/portfolio-template/portfolio-template",
+  "pages_count": 10,
+  "css_count": 11,
+  "js_count": 1,
+  "detected_dependencies": {
+    "jQuery": [
+      "https://code.jquery.com/jquery-3.7.1.min.js"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+.post-card h3{margin:10px 0 6px;}.post-card .meta{color:var(--muted);font-size:14px;}.tag{font-size:12px;color:var(--muted);}.search{width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);}@media (max-width:720px){.post-card .meta{font-size:13px;}.search{font-size:16px;}}

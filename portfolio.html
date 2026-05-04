@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio • Student Portfolio Starter</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <nav>
+      <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="about.html" class="">About</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="resume.html" class="">Resume</a></li>
+          <li><a href="testimonials.html" class="">Testimonials</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+<main>
+  <div class="container">
+
+<section>
+  <h1>Projects</h1>
+  <div class="filters">
+    <button class="btn filter active" data-filter="all">All</button>
+    <button class="btn filter" data-filter="web">Web</button>
+    <button class="btn filter" data-filter="mobile">Mobile</button>
+    <button class="btn filter" data-filter="data">Data</button>
+    <button class="btn filter" data-filter="design">Design</button>
+  </div>
+  <div class="grid cols-3" id="project-list"></div>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

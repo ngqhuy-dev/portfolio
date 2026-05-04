@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • Student Portfolio Starter</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <nav>
+      <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html" class="">About</a></li>
+          <li><a href="portfolio.html" class="">Portfolio</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="resume.html" class="">Resume</a></li>
+          <li><a href="testimonials.html" class="">Testimonials</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+<main>
+  <div class="container">
+
+<section class="hero">
+  <div>
+    <h1>Show your work with confidence.</h1>
+    <p>A clean, multi-page portfolio starter built for students. Responsive layout, light/dark mode, and data-driven sections powered by JSON.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="portfolio.html">View Projects</a>
+      <a class="btn" href="about.html">Learn More</a>
+    </div>
+    <div class="grid cols-3" style="margin-top:18px">
+      <div class="card feature"><i>⚡</i><div><strong>Fast to edit</strong><div>Each page has its own CSS file.</div></div></div>
+      <div class="card feature"><i>🌓</i><div><strong>Light/Dark</strong><div>Built-in theme toggle with local storage.</div></div></div>
+      <div class="card feature"><i>🧩</i><div><strong>JSON data</strong><div>Projects, posts, testimonials fetched via jQuery.</div></div></div>
+    </div>
+  </div>
+  <div>
+    <img src="https://picsum.photos/800/500?random=8" alt="Showcase image" />
+  </div>
+</section>
+
+<section style="margin-top:26px">
+  <h2>Featured Projects</h2>
+  <div class="grid cols-3" id="featured-projects"></div>
+  <div style="margin-top:12px"><a class="btn" href="portfolio.html">See all projects →</a></div>
+</section>
+
+<section style="margin-top:26px">
+  <h2>Latest Articles</h2>
+  <div class="grid cols-3" id="latest-posts"></div>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

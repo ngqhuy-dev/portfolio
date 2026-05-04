@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "title": "Project 1: Student Showcase",
+    "category": "mobile",
+    "date": "2024-02-15",
+    "technologies": [
+      "React",
+      "Node",
+      "Express"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p1/800/500",
+    "images": [
+      "https://picsum.photos/seed/p1a/800/500",
+      "https://picsum.photos/seed/p1b/800/500",
+      "https://picsum.photos/seed/p1c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Project 2: Student Showcase",
+    "category": "data",
+    "date": "2024-03-15",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Pandas"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p2/800/500",
+    "images": [
+      "https://picsum.photos/seed/p2a/800/500",
+      "https://picsum.photos/seed/p2b/800/500",
+      "https://picsum.photos/seed/p2c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Project 3: Student Showcase",
+    "category": "design",
+    "date": "2024-04-15",
+    "technologies": [
+      "Figma",
+      "Framer"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p3/800/500",
+    "images": [
+      "https://picsum.photos/seed/p3a/800/500",
+      "https://picsum.photos/seed/p3b/800/500",
+      "https://picsum.photos/seed/p3c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Project 4: Student Showcase",
+    "category": "web",
+    "date": "2024-05-15",
+    "technologies": [
+      "Vue",
+      "Firebase"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p4/800/500",
+    "images": [
+      "https://picsum.photos/seed/p4a/800/500",
+      "https://picsum.photos/seed/p4b/800/500",
+      "https://picsum.photos/seed/p4c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Project 5: Student Showcase",
+    "category": "mobile",
+    "date": "2024-06-15",
+    "technologies": [
+      "Svelte",
+      "Supabase"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p5/800/500",
+    "images": [
+      "https://picsum.photos/seed/p5a/800/500",
+      "https://picsum.photos/seed/p5b/800/500",
+      "https://picsum.photos/seed/p5c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Project 6: Student Showcase",
+    "category": "data",
+    "date": "2024-07-15",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p6/800/500",
+    "images": [
+      "https://picsum.photos/seed/p6a/800/500",
+      "https://picsum.photos/seed/p6b/800/500",
+      "https://picsum.photos/seed/p6c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Project 7: Student Showcase",
+    "category": "design",
+    "date": "2024-08-15",
+    "technologies": [
+      "React",
+      "Node",
+      "Express"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p7/800/500",
+    "images": [
+      "https://picsum.photos/seed/p7a/800/500",
+      "https://picsum.photos/seed/p7b/800/500",
+      "https://picsum.photos/seed/p7c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Project 8: Student Showcase",
+    "category": "web",
+    "date": "2024-09-15",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Pandas"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p8/800/500",
+    "images": [
+      "https://picsum.photos/seed/p8a/800/500",
+      "https://picsum.photos/seed/p8b/800/500",
+      "https://picsum.photos/seed/p8c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Project 9: Student Showcase",
+    "category": "mobile",
+    "date": "2024-10-15",
+    "technologies": [
+      "Figma",
+      "Framer"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p9/800/500",
+    "images": [
+      "https://picsum.photos/seed/p9a/800/500",
+      "https://picsum.photos/seed/p9b/800/500",
+      "https://picsum.photos/seed/p9c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Project 10: Student Showcase",
+    "category": "data",
+    "date": "2024-11-15",
+    "technologies": [
+      "Vue",
+      "Firebase"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p10/800/500",
+    "images": [
+      "https://picsum.photos/seed/p10a/800/500",
+      "https://picsum.photos/seed/p10b/800/500",
+      "https://picsum.photos/seed/p10c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Project 11: Student Showcase",
+    "category": "design",
+    "date": "2024-12-15",
+    "technologies": [
+      "Svelte",
+      "Supabase"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p11/800/500",
+    "images": [
+      "https://picsum.photos/seed/p11a/800/500",
+      "https://picsum.photos/seed/p11b/800/500",
+      "https://picsum.photos/seed/p11c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Project 12: Student Showcase",
+    "category": "web",
+    "date": "2024-01-15",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "summary": "A short description of the project highlighting goals and outcomes.",
+    "image": "https://picsum.photos/seed/p12/800/500",
+    "images": [
+      "https://picsum.photos/seed/p12a/800/500",
+      "https://picsum.photos/seed/p12b/800/500",
+      "https://picsum.photos/seed/p12c/800/500"
+    ],
+    "github": "https://github.com/yourname/project",
+    "live": "#",
+    "content": [
+      "This project explores core concepts and demonstrates practical implementation.",
+      "Key contributions included building components, writing tests, and documentation.",
+      "Outcomes: improved performance, better UX, and solid learning."
+    ]
+  }
+]

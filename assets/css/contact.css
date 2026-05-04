@@ -1,0 +1,1 @@
+form{display:grid;gap:12px;}input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);}textarea{min-height:140px;}.success{color:#16a34a;display:none;}.error{color:#dc2626;display:none;}@media (max-width:720px){form .grid{grid-template-columns:1fr;}input,textarea{font-size:16px;}}
