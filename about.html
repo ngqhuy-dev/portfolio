@@ -3,23 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About • Student Portfolio Starter</title>
+  <title>About Nguyễn Quốc Huy | Software Engineer</title>
+  <meta name="description" content="About Nguyễn Quốc Huy, a software engineer working with React, React Native, API integration, realtime behavior, and production UI." />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/professional.css" />
 </head>
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
     <nav>
       <ul>
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
-          <li><a href="portfolio.html" class="">Portfolio</a></li>
-          <li><a href="services.html" class="">Services</a></li>
-          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="portfolio.html" class="">Projects</a></li>
           <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="testimonials.html" class="">Testimonials</a></li>
           <li><a href="contact.html" class="">Contact</a></li>
       </ul>
     </nav>
@@ -30,30 +29,65 @@
 <main>
   <div class="container">
 
-<section class="profile">
-  <div class="card">
-    <img src="https://picsum.photos/600/400?random=1" alt="Portrait" />
+<section class="profile fade-in">
+  <div class="hero-panel">
+    <div class="hero-panel-top">
+      <span class="hero-panel-dot"></span>
+      <span class="hero-panel-dot"></span>
+      <span class="hero-panel-dot"></span>
+    </div>
+    <div class="hero-panel-body">
+      <div class="signal">
+        <strong>Nguyễn Quốc Huy</strong>
+        <p>Software Engineer based in Huế, Vietnam.</p>
+      </div>
+      <div class="signal">
+        <strong>Software Engineering</strong>
+        <p>Hue University of Sciences, 2021 - 2025.</p>
+      </div>
+      <div class="signal">
+        <strong>Engineering focus</strong>
+        <p>Frontend-heavy product work with backend context.</p>
+      </div>
+    </div>
   </div>
   <div>
-    <h1>About Me</h1>
-    <p>Hello! I'm <strong>Alex Student</strong>, a developer/designer passionate about building usable and beautiful products. This starter exists to help students showcase their work quickly.</p>
-    <div class="grid cols-2">
-      <div class="card">
-        <h3>Skills</h3>
-        <div class="badge">HTML</div>
-        <div class="badge">CSS</div>
-        <div class="badge">JavaScript</div>
-        <div class="badge">React</div>
-        <div class="badge">Figma</div>
+    <p class="eyebrow">About</p>
+    <h1>Engineer for product UI, state, and integrations.</h1>
+    <p>I build React and React Native features that sit close to product logic: authentication, media upload, realtime events, notifications, chat, and admin workflows.</p>
+    <p>My work is strongest where the UI depends on reliable API behavior, clear state ownership, and careful handling of edge cases across web and mobile.</p>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card skill-card">
+        <h3>Engineering priorities</h3>
+        <ul class="timeline-list">
+          <li>State that is easy to trace and hard to desync.</li>
+          <li>API and realtime flows with explicit failure states.</li>
+          <li>Small fixes that preserve existing product behavior.</li>
+        </ul>
       </div>
-      <div class="card">
+      <div class="card skill-card">
         <h3>Education</h3>
         <ul class="timeline">
-          <li><strong>BSc Computer Science</strong> — 2022–2026</li>
-          <li><strong>Design Minor</strong> — 2023–2026</li>
+          <li><strong>Software Engineering</strong> — Hue University of Sciences, 2021 - 2025</li>
+          <li>Bachelor degree, good classification. GPA: 2.79.</li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Skills</p>
+      <h2>Technical stack.</h2>
+    </div>
+  </div>
+  <div class="skill-grid">
+    <div class="card skill-card"><h3>Frontend</h3><div class="skill-list"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">TypeScript</span><span class="badge">React JS</span></div></div>
+    <div class="card skill-card"><h3>Mobile & State</h3><div class="skill-list"><span class="badge">React Native</span><span class="badge">Redux Toolkit</span><span class="badge">Zustand</span><span class="badge">Axios API</span></div></div>
+    <div class="card skill-card"><h3>Backend & Data</h3><div class="skill-list"><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">MongoDB</span><span class="badge">PostgreSQL</span></div></div>
+    <div class="card skill-card"><h3>Integrations</h3><div class="skill-list"><span class="badge">Firebase</span><span class="badge">Rocket.Chat API</span><span class="badge">Strapi</span><span class="badge">Cloudinary</span><span class="badge">VNPay</span></div></div>
   </div>
 </section>
 
@@ -61,10 +95,11 @@
 </main>
 <footer>
   <div class="container">
-    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/professional.js"></script>
 </body>
 </html>

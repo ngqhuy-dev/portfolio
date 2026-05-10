@@ -1,58 +1,23 @@
 [
   {
-    "name": "Person 1",
+    "name": "Reference placeholder",
+    "role": "Tech Lead / Mentor",
+    "company": "Add company name",
+    "avatar": "https://placehold.co/100x100/0f766e/ffffff?text=TL",
+    "quote": "Replace this placeholder with a real recommendation after receiving permission from the mentor or manager."
+  },
+  {
+    "name": "Reference placeholder",
     "role": "Teammate",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=1",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+    "company": "Add company name",
+    "avatar": "https://placehold.co/100x100/1d4ed8/ffffff?text=TM",
+    "quote": "Use this card for a teammate quote about collaboration, ownership, debugging, or product delivery."
   },
   {
-    "name": "Person 2",
-    "role": "Mentor",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=2",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 3",
-    "role": "Teammate",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=3",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 4",
-    "role": "Mentor",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=4",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 5",
-    "role": "Teammate",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=5",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 6",
-    "role": "Mentor",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=6",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 7",
-    "role": "Teammate",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=7",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
-  },
-  {
-    "name": "Person 8",
-    "role": "Mentor",
-    "company": "University Lab",
-    "avatar": "https://i.pravatar.cc/100?img=8",
-    "quote": "Working with Alex was a great experience\u2014reliable, curious, and thoughtful."
+    "name": "Reference placeholder",
+    "role": "QC / Product collaborator",
+    "company": "Add company name",
+    "avatar": "https://placehold.co/100x100/7c3aed/ffffff?text=QC",
+    "quote": "Use this card for a quote related to bug fixing quality, UI/UX detail, or workflow reliability."
   }
 ]

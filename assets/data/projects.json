@@ -1,296 +1,145 @@
 [
   {
     "id": 1,
-    "title": "Project 1: Student Showcase",
-    "category": "mobile",
-    "date": "2024-02-15",
+    "title": "Linora Social Network",
+    "category": "realtime",
+    "date": "2025-06-01",
     "technologies": [
-      "React",
-      "Node",
-      "Express"
+      "React Native",
+      "Redux Toolkit",
+      "Axios API",
+      "Zalo OTP",
+      "Realtime"
     ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p1/800/500",
+    "summary": "Social product work covering media upload, realtime engagement, social connections, and Zalo OTP authentication.",
+    "image": "https://placehold.co/800x500/0f766e/ffffff?text=Linora+Social+Network",
     "images": [
-      "https://picsum.photos/seed/p1a/800/500",
-      "https://picsum.photos/seed/p1b/800/500",
-      "https://picsum.photos/seed/p1c/800/500"
+      "https://placehold.co/800x500/0f766e/ffffff?text=Media+Upload+Flow",
+      "https://placehold.co/800x500/115e59/ffffff?text=Realtime+Like+Comment",
+      "https://placehold.co/800x500/134e4a/ffffff?text=Social+Connection"
     ],
-    "github": "https://github.com/yourname/project",
+    "github": "#",
     "live": "#",
     "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
+      "Role: Frontend Developer Intern at Platinum Technology.",
+      "Closed QC issues in UI state, interaction logic, and crash-prone flows; reported crash rate decreased by 40%.",
+      "Worked on media upload, realtime like/comment behavior, social connections, and Zalo OTP authentication.",
+      "Repository and live URL are private."
     ]
   },
   {
     "id": 2,
-    "title": "Project 2: Student Showcase",
-    "category": "data",
-    "date": "2024-03-15",
+    "title": "Gas Thanh Giong Management",
+    "category": "mobile",
+    "date": "2025-07-01",
     "technologies": [
-      "Python",
-      "Flask",
-      "Pandas"
+      "React Native",
+      "Firebase Cloud Messaging",
+      "Realtime Location",
+      "OTP",
+      "Web Admin"
     ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p2/800/500",
+    "summary": "Operations product for gas technicians with mobile workflows, OTP identification, realtime location, notifications, and admin updates.",
+    "image": "https://placehold.co/800x500/1d4ed8/ffffff?text=Gas+Management",
     "images": [
-      "https://picsum.photos/seed/p2a/800/500",
-      "https://picsum.photos/seed/p2b/800/500",
-      "https://picsum.photos/seed/p2c/800/500"
+      "https://placehold.co/800x500/1d4ed8/ffffff?text=Technician+Mobile+Flow",
+      "https://placehold.co/800x500/1e40af/ffffff?text=Realtime+Location",
+      "https://placehold.co/800x500/1e3a8a/ffffff?text=Order+Status+Notification"
     ],
-    "github": "https://github.com/yourname/project",
+    "github": "#",
     "live": "#",
     "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
+      "Built mobile flows for technician operations and OTP-based identity verification.",
+      "Implemented realtime location tracking and Firebase Cloud Messaging for order-status updates.",
+      "Updated web admin features without changing the existing operational flow.",
+      "Repository and live URL are private."
     ]
   },
   {
     "id": 3,
-    "title": "Project 3: Student Showcase",
-    "category": "design",
-    "date": "2024-04-15",
+    "title": "Event Flow",
+    "category": "fullstack",
+    "date": "2025-08-01",
     "technologies": [
-      "Figma",
-      "Framer"
+      "React JS",
+      "Node.js",
+      "Express",
+      "QR Check-in",
+      "Invitation System"
     ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p3/800/500",
+    "summary": "Event platform with QR check-in, scoring workflows, submission management, and generated digital invitations.",
+    "image": "https://placehold.co/800x500/7c3aed/ffffff?text=Event+Flow",
     "images": [
-      "https://picsum.photos/seed/p3a/800/500",
-      "https://picsum.photos/seed/p3b/800/500",
-      "https://picsum.photos/seed/p3c/800/500"
+      "https://placehold.co/800x500/7c3aed/ffffff?text=QR+Check-in",
+      "https://placehold.co/800x500/6d28d9/ffffff?text=Submission+Management",
+      "https://placehold.co/800x500/5b21b6/ffffff?text=Digital+Invitation"
     ],
-    "github": "https://github.com/yourname/project",
+    "github": "#",
     "live": "#",
     "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
+      "Built frontend and backend features with React.js and Node.js.",
+      "Implemented submission management and automatic digital invitation generation.",
+      "Reduced event check-in friction through QR-based entry flow.",
+      "Repository and live URL are private."
     ]
   },
   {
     "id": 4,
-    "title": "Project 4: Student Showcase",
-    "category": "web",
-    "date": "2024-05-15",
+    "title": "Kyn Group Internal Chat",
+    "category": "realtime",
+    "date": "2025-09-01",
     "technologies": [
-      "Vue",
-      "Firebase"
+      "Rocket.Chat API",
+      "Redux Toolkit",
+      "React Native",
+      "Realtime Chat",
+      "State Management"
     ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p4/800/500",
+    "summary": "Internal chat integration using Rocket.Chat API with centralized conversation state and realtime message synchronization.",
+    "image": "https://placehold.co/800x500/be123c/ffffff?text=Kyn+Group+Chat",
     "images": [
-      "https://picsum.photos/seed/p4a/800/500",
-      "https://picsum.photos/seed/p4b/800/500",
-      "https://picsum.photos/seed/p4c/800/500"
+      "https://placehold.co/800x500/be123c/ffffff?text=Rocket.Chat+API",
+      "https://placehold.co/800x500/9f1239/ffffff?text=Conversation+State",
+      "https://placehold.co/800x500/881337/ffffff?text=Realtime+Messages"
     ],
-    "github": "https://github.com/yourname/project",
+    "github": "#",
     "live": "#",
     "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
+      "Worked with a Tech Lead on complex chat data flows.",
+      "Integrated internal chat through Rocket.Chat API.",
+      "Managed conversation state with Redux Toolkit to keep message data synchronized.",
+      "Repository and live URL are private."
     ]
   },
   {
     "id": 5,
-    "title": "Project 5: Student Showcase",
-    "category": "mobile",
-    "date": "2024-06-15",
+    "title": "JinStore Cross-platform Sales System",
+    "category": "fullstack",
+    "date": "2025-02-01",
     "technologies": [
-      "Svelte",
-      "Supabase"
+      "React JS",
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "WebSocket",
+      "VNPay",
+      "Cloudinary"
     ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p5/800/500",
+    "summary": "Cross-platform commerce system with web, mobile, backend APIs, Google login, OTP verification, VNPay, Cloudinary, and WebSocket.",
+    "image": "https://placehold.co/800x500/ca8a04/111827?text=JinStore",
     "images": [
-      "https://picsum.photos/seed/p5a/800/500",
-      "https://picsum.photos/seed/p5b/800/500",
-      "https://picsum.photos/seed/p5c/800/500"
+      "https://placehold.co/800x500/ca8a04/111827?text=Web+Storefront",
+      "https://placehold.co/800x500/a16207/ffffff?text=Mobile+App",
+      "https://placehold.co/800x500/854d0e/ffffff?text=Payment+and+Storage"
     ],
-    "github": "https://github.com/yourname/project",
+    "github": "https://bitbucket.org/crossplatformdev/workspace/projects/EJ",
     "live": "#",
     "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Project 6: Student Showcase",
-    "category": "data",
-    "date": "2024-07-15",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JS"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p6/800/500",
-    "images": [
-      "https://picsum.photos/seed/p6a/800/500",
-      "https://picsum.photos/seed/p6b/800/500",
-      "https://picsum.photos/seed/p6c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Project 7: Student Showcase",
-    "category": "design",
-    "date": "2024-08-15",
-    "technologies": [
-      "React",
-      "Node",
-      "Express"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p7/800/500",
-    "images": [
-      "https://picsum.photos/seed/p7a/800/500",
-      "https://picsum.photos/seed/p7b/800/500",
-      "https://picsum.photos/seed/p7c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 8,
-    "title": "Project 8: Student Showcase",
-    "category": "web",
-    "date": "2024-09-15",
-    "technologies": [
-      "Python",
-      "Flask",
-      "Pandas"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p8/800/500",
-    "images": [
-      "https://picsum.photos/seed/p8a/800/500",
-      "https://picsum.photos/seed/p8b/800/500",
-      "https://picsum.photos/seed/p8c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Project 9: Student Showcase",
-    "category": "mobile",
-    "date": "2024-10-15",
-    "technologies": [
-      "Figma",
-      "Framer"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p9/800/500",
-    "images": [
-      "https://picsum.photos/seed/p9a/800/500",
-      "https://picsum.photos/seed/p9b/800/500",
-      "https://picsum.photos/seed/p9c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 10,
-    "title": "Project 10: Student Showcase",
-    "category": "data",
-    "date": "2024-11-15",
-    "technologies": [
-      "Vue",
-      "Firebase"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p10/800/500",
-    "images": [
-      "https://picsum.photos/seed/p10a/800/500",
-      "https://picsum.photos/seed/p10b/800/500",
-      "https://picsum.photos/seed/p10c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Project 11: Student Showcase",
-    "category": "design",
-    "date": "2024-12-15",
-    "technologies": [
-      "Svelte",
-      "Supabase"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p11/800/500",
-    "images": [
-      "https://picsum.photos/seed/p11a/800/500",
-      "https://picsum.photos/seed/p11b/800/500",
-      "https://picsum.photos/seed/p11c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
-    ]
-  },
-  {
-    "id": 12,
-    "title": "Project 12: Student Showcase",
-    "category": "web",
-    "date": "2024-01-15",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JS"
-    ],
-    "summary": "A short description of the project highlighting goals and outcomes.",
-    "image": "https://picsum.photos/seed/p12/800/500",
-    "images": [
-      "https://picsum.photos/seed/p12a/800/500",
-      "https://picsum.photos/seed/p12b/800/500",
-      "https://picsum.photos/seed/p12c/800/500"
-    ],
-    "github": "https://github.com/yourname/project",
-    "live": "#",
-    "content": [
-      "This project explores core concepts and demonstrates practical implementation.",
-      "Key contributions included building components, writing tests, and documentation.",
-      "Outcomes: improved performance, better UX, and solid learning."
+      "Personal project started in 02/2025.",
+      "Implemented Google login, OTP verification, VNPay payment, and Cloudinary image storage.",
+      "Used React JS, React Native, SCSS, Redux Toolkit, Zustand, WebSocket, Node.js, Express, and MongoDB.",
+      "Bitbucket project link is listed from the CV."
     ]
   }
 ]

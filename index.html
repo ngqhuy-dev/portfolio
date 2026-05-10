@@ -3,23 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home • Student Portfolio Starter</title>
+  <title>Nguyễn Quốc Huy | Software Engineer</title>
+  <meta name="description" content="Portfolio of Nguyễn Quốc Huy, a software engineer working with React, React Native, API integration, authentication, realtime features, and product UI." />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/professional.css" />
 </head>
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
     <nav>
       <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html" class="">About</a></li>
-          <li><a href="portfolio.html" class="">Portfolio</a></li>
-          <li><a href="services.html" class="">Services</a></li>
-          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="portfolio.html" class="">Projects</a></li>
           <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="testimonials.html" class="">Testimonials</a></li>
           <li><a href="contact.html" class="">Contact</a></li>
       </ul>
     </nav>
@@ -30,44 +29,81 @@
 <main>
   <div class="container">
 
-<section class="hero">
+<section class="hero fade-in">
   <div>
-    <h1>Show your work with confidence.</h1>
-    <p>A clean, multi-page portfolio starter built for students. Responsive layout, light/dark mode, and data-driven sections powered by JSON.</p>
+    <p class="eyebrow">Software Engineer</p>
+    <h1>React and React Native engineer focused on product reliability.</h1>
+    <p>I work on product features where UI state, API contracts, authentication, realtime updates, and failure handling need to stay predictable across web and mobile.</p>
     <div class="hero-actions">
       <a class="btn primary" href="portfolio.html">View Projects</a>
-      <a class="btn" href="about.html">Learn More</a>
+      <a class="btn" href="resume.html">See Experience</a>
+      <a class="btn" href="contact.html">Contact Me</a>
     </div>
-    <div class="grid cols-3" style="margin-top:18px">
-      <div class="card feature"><i>⚡</i><div><strong>Fast to edit</strong><div>Each page has its own CSS file.</div></div></div>
-      <div class="card feature"><i>🌓</i><div><strong>Light/Dark</strong><div>Built-in theme toggle with local storage.</div></div></div>
-      <div class="card feature"><i>🧩</i><div><strong>JSON data</strong><div>Projects, posts, testimonials fetched via jQuery.</div></div></div>
+    <div class="stat-grid" style="margin-top:22px">
+      <div class="stat"><strong>80+</strong><span>QC issues closed across UI state, logic, and edge cases</span></div>
+      <div class="stat"><strong>40%</strong><span>Reported crash-rate reduction after stabilization work</span></div>
+      <div class="stat"><strong>4</strong><span>Product domains: social, operations, events, commerce</span></div>
     </div>
   </div>
-  <div>
-    <img src="https://picsum.photos/800/500?random=8" alt="Showcase image" />
+  <div class="hero-panel" aria-label="Developer profile summary">
+    <div class="hero-panel-top">
+      <span class="hero-panel-dot"></span>
+      <span class="hero-panel-dot"></span>
+      <span class="hero-panel-dot"></span>
+    </div>
+    <div class="hero-panel-body">
+      <div class="signal">
+        <strong>React / React Native</strong>
+        <p>Feature delivery for social, operations, event, and commerce flows.</p>
+      </div>
+      <div class="signal">
+        <strong>Realtime & Auth</strong>
+        <p>OTP auth, like/comment sync, location tracking, chat, and FCM notifications.</p>
+      </div>
+      <div class="signal">
+        <strong>API-driven Work</strong>
+        <p>React, Node.js, Express, MongoDB, PostgreSQL, Strapi, and third-party integrations.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section style="margin-top:26px">
-  <h2>Featured Projects</h2>
+<section class="section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2>Selected product work.</h2>
+    </div>
+    <p>Short case studies from product work and personal systems. Private repositories are marked clearly.</p>
+  </div>
   <div class="grid cols-3" id="featured-projects"></div>
-  <div style="margin-top:12px"><a class="btn" href="portfolio.html">See all projects →</a></div>
+  <div style="margin-top:12px"><a class="btn" href="portfolio.html">See all projects</a></div>
 </section>
 
-<section style="margin-top:26px">
-  <h2>Latest Articles</h2>
-  <div class="grid cols-3" id="latest-posts"></div>
+<section class="section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Core stack</p>
+      <h2>Stack used in real features.</h2>
+    </div>
+  </div>
+  <div class="skill-grid">
+    <div class="card skill-card"><h3>Frontend</h3><div class="skill-list"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">TypeScript</span><span class="badge">React JS</span></div></div>
+    <div class="card skill-card"><h3>Mobile</h3><div class="skill-list"><span class="badge">React Native</span><span class="badge">Redux Toolkit</span><span class="badge">Axios API</span><span class="badge">OTP flows</span></div></div>
+    <div class="card skill-card"><h3>Backend</h3><div class="skill-list"><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">MongoDB</span><span class="badge">PostgreSQL</span><span class="badge">Strapi</span></div></div>
+    <div class="card skill-card"><h3>Tools</h3><div class="skill-list"><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">Bitbucket</span><span class="badge">Postman</span><span class="badge">Figma</span></div></div>
+  </div>
 </section>
 
   </div>
 </main>
 <footer>
   <div class="container">
-    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/professional.js"></script>
 </body>
 </html>

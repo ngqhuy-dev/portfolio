@@ -1,182 +1,56 @@
 [
   {
     "id": 1,
-    "title": "Learning Note 1: Tips for Students",
-    "date": "2025-02-02",
-    "author": "Alex Student",
+    "title": "Notes from closing 80+ product issues",
+    "date": "2025-12-01",
+    "author": "Nguyễn Quốc Huy",
     "tags": [
       "frontend",
-      "design",
+      "quality",
       "ux"
     ],
-    "hero": "https://picsum.photos/seed/b1/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "hero": "https://placehold.co/900x500/0f766e/ffffff?text=Frontend+Quality",
+    "excerpt": "Debugging notes from UI state, product logic, and crash-prone flows.",
     "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
+      "I start by reproducing the issue and tracing the user action through UI state, API response, and side effects.",
+      "The fix is usually smaller after the real state owner is clear.",
+      "Frontend quality depends on predictable async flows, explicit failure states, and changes that do not break existing behavior."
     ]
   },
   {
     "id": 2,
-    "title": "Learning Note 2: Tips for Students",
-    "date": "2025-03-03",
-    "author": "Alex Student",
+    "title": "Realtime UI needs clear state ownership",
+    "date": "2025-10-10",
+    "author": "Nguyễn Quốc Huy",
     "tags": [
-      "study",
-      "portfolio",
-      "career"
+      "realtime",
+      "redux",
+      "mobile"
     ],
-    "hero": "https://picsum.photos/seed/b2/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "hero": "https://placehold.co/900x500/be123c/ffffff?text=Realtime+State",
+    "excerpt": "Lessons from like/comment sync, realtime location, notifications, and chat state.",
     "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
+      "Realtime UI needs one source of truth so socket events, API responses, and optimistic updates stay consistent.",
+      "Redux Toolkit helped keep conversation and interaction state predictable when events arrived in different orders.",
+      "Mobile notifications should confirm useful state changes without adding noise."
     ]
   },
   {
     "id": 3,
-    "title": "Learning Note 3: Tips for Students",
-    "date": "2025-04-04",
-    "author": "Alex Student",
+    "title": "Frontend work improves with backend context",
+    "date": "2025-08-20",
+    "author": "Nguyễn Quốc Huy",
     "tags": [
-      "frontend",
-      "design",
-      "ux"
-    ],
-    "hero": "https://picsum.photos/seed/b3/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Learning Note 4: Tips for Students",
-    "date": "2025-05-05",
-    "author": "Alex Student",
-    "tags": [
-      "study",
-      "portfolio",
+      "fullstack",
+      "nodejs",
       "career"
     ],
-    "hero": "https://picsum.photos/seed/b4/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
+    "hero": "https://placehold.co/900x500/7c3aed/ffffff?text=Backend+Context",
+    "excerpt": "How API contracts, data shape, auth, storage, and payment affect product UI.",
     "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Learning Note 5: Tips for Students",
-    "date": "2025-06-06",
-    "author": "Alex Student",
-    "tags": [
-      "frontend",
-      "design",
-      "ux"
-    ],
-    "hero": "https://picsum.photos/seed/b5/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Learning Note 6: Tips for Students",
-    "date": "2025-07-07",
-    "author": "Alex Student",
-    "tags": [
-      "study",
-      "portfolio",
-      "career"
-    ],
-    "hero": "https://picsum.photos/seed/b6/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Learning Note 7: Tips for Students",
-    "date": "2025-08-08",
-    "author": "Alex Student",
-    "tags": [
-      "frontend",
-      "design",
-      "ux"
-    ],
-    "hero": "https://picsum.photos/seed/b7/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 8,
-    "title": "Learning Note 8: Tips for Students",
-    "date": "2025-09-09",
-    "author": "Alex Student",
-    "tags": [
-      "study",
-      "portfolio",
-      "career"
-    ],
-    "hero": "https://picsum.photos/seed/b8/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Learning Note 9: Tips for Students",
-    "date": "2025-10-01",
-    "author": "Alex Student",
-    "tags": [
-      "frontend",
-      "design",
-      "ux"
-    ],
-    "hero": "https://picsum.photos/seed/b9/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
-    ]
-  },
-  {
-    "id": 10,
-    "title": "Learning Note 10: Tips for Students",
-    "date": "2025-11-02",
-    "author": "Alex Student",
-    "tags": [
-      "study",
-      "portfolio",
-      "career"
-    ],
-    "hero": "https://picsum.photos/seed/b10/900/500",
-    "excerpt": "Quick ideas to improve your workflow and showcase your work.",
-    "content": [
-      "Start with a clear goal for each project: what skill are you demonstrating?",
-      "Document your process with screenshots and notes as you go.",
-      "Reflect on outcomes: what did you learn and what would you improve?"
+      "Frontend decisions are better when API contracts, data shape, and failure cases are understood early.",
+      "Event Flow and JinStore connected UI flows with authentication, payment, storage, and database decisions.",
+      "My current focus is frontend reliability with enough backend context to own complete features."
     ]
   }
 ]

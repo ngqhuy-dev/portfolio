@@ -3,23 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume • Student Portfolio Starter</title>
+  <title>Resume | Nguyễn Quốc Huy</title>
+  <meta name="description" content="Resume of Nguyễn Quốc Huy: React, React Native, API integration, realtime features, OTP authentication, and product stabilization work." />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/resume.css" />
+  <link rel="stylesheet" href="assets/css/professional.css" />
 </head>
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">StudentPortfolio<span style="color:var(--accent)">.kit</span></a></div>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
     <nav>
       <ul>
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="about.html" class="">About</a></li>
-          <li><a href="portfolio.html" class="">Portfolio</a></li>
-          <li><a href="services.html" class="">Services</a></li>
-          <li><a href="blog.html" class="">Blog</a></li>
+          <li><a href="portfolio.html" class="">Projects</a></li>
           <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="testimonials.html" class="">Testimonials</a></li>
           <li><a href="contact.html" class="">Contact</a></li>
       </ul>
     </nav>
@@ -31,28 +30,54 @@
   <div class="container">
 
 <section>
-  <h1>Resume</h1>
+  <p class="eyebrow">Resume</p>
+  <h1>Product engineering experience.</h1>
   <div class="resume-grid">
     <div class="card">
       <h3>Contact</h3>
-      <p><strong>Email:</strong> alex@example.com</p>
-      <p><strong>Location:</strong> Vancouver, BC</p>
-      <p><a class="btn" href="#">Download PDF</a></p>
+      <p><strong>Email:</strong> <a href="mailto:nguyenquochuy812003@gmail.com">nguyenquochuy812003@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+84832766413">0832 766 413</a></p>
+      <p><strong>Location:</strong> Huế, Vietnam</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/nqhuy.it" target="_blank" rel="noopener">nqhuy.it</a></p>
+      <p><a class="btn primary" href="contact.html">Contact</a></p>
     </div>
     <div>
       <div class="resume-section card">
         <h3>Experience</h3>
-        <p><strong>Front-end Intern</strong> — 2024<br/>Helped ship components, fixed bugs, wrote docs.</p>
-        <p><strong>Design Research Assistant</strong> — 2023<br/>Interviewed users, synthesized insights.</p>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-meta">03/2025 - 12/2025 · Platinum Technology</div>
+            <div class="timeline-title">Frontend Developer Intern</div>
+            <p>Worked on React/React Native product features and stabilization across multiple client projects.</p>
+            <ul class="timeline-list">
+              <li>Closed 80+ QC issues across UI state, business logic, and crash-prone screens; reported crash rate decreased by 40%.</li>
+              <li>Implemented and stabilized media upload, realtime like/comment, social connection, OTP authentication, and notification flows.</li>
+              <li>Worked with mobile app, web admin, realtime tracking, Firebase Cloud Messaging, Rocket.Chat API, and Redux Toolkit state.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-meta">02/2025 - Present · Personal Project</div>
+            <div class="timeline-title">JinStore - Cross-platform Sales System</div>
+            <ul class="timeline-list">
+              <li>Built web/mobile commerce flows with React, React Native, Node.js, Express, MongoDB, Redux Toolkit, Zustand, and WebSocket.</li>
+              <li>Integrated Google login, OTP verification, VNPay payment, and Cloudinary image storage.</li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <div class="resume-section card">
         <h3>Education</h3>
-        <p>BSc Computer Science, 2022–2026</p>
+        <p><strong>Hue University of Sciences</strong> — Software Engineering, 2021 - 2025</p>
+        <p>Bachelor degree, good classification. GPA: 2.79.</p>
       </div>
       <div class="resume-section card">
         <h3>Skills</h3>
-        <div class="badge">HTML</div><div class="badge">CSS</div><div class="badge">JS</div>
-        <div class="badge">React</div><div class="badge">Node</div><div class="badge">Figma</div>
+        <div class="badge">HTML</div><div class="badge">CSS</div><div class="badge">JavaScript</div>
+        <div class="badge">TypeScript</div><div class="badge">React JS</div><div class="badge">React Native</div>
+        <div class="badge">Redux Toolkit</div><div class="badge">Axios API</div><div class="badge">Node.js</div>
+        <div class="badge">Express</div><div class="badge">MongoDB</div><div class="badge">PostgreSQL</div>
+        <div class="badge">Firebase</div><div class="badge">Rocket.Chat</div><div class="badge">Strapi</div>
+        <div class="badge">Git</div><div class="badge">Bitbucket</div><div class="badge">Postman</div><div class="badge">Figma</div>
       </div>
     </div>
   </div>
@@ -62,10 +87,11 @@
 </main>
 <footer>
   <div class="container">
-    <div>© <span id="year"></span> Student Portfolio Starter. Built with HTML • CSS • JS • jQuery.</div>
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/professional.js"></script>
 </body>
 </html>
