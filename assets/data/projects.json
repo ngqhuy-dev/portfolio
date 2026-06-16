@@ -1,5 +1,71 @@
 [
   {
+    "id": 6,
+    "title": "AntBuddy Mobile — CRM Omni-channel App",
+    "category": "mobile",
+    "date": "03/2026",
+    "technologies": [
+      "React Native",
+      "Firebase",
+      "Socket.io",
+      "VoIP (PJSIP)",
+      "Redux Toolkit",
+      "Realm",
+      "CodePush"
+    ],
+    "summary": "Production CRM mobile app (iOS + Android) for omni-channel customer support. Worked on call system, TikTok channel, push notification lifecycle, and Omni inbox.",
+    "image": "https://placehold.co/800x500/0f4c81/ffffff?text=AntBuddy+Mobile",
+    "images": [
+      "https://placehold.co/800x500/0f4c81/ffffff?text=Call+System+%2B+VoIP",
+      "https://placehold.co/800x500/0d3d6e/ffffff?text=Omni+Inbox+%2B+TikTok",
+      "https://placehold.co/800x500/0a2d52/ffffff?text=Push+Notifications+iOS%2FAndroid"
+    ],
+    "github": "#",
+    "live": "#",
+    "content": [
+      "Role: Frontend Developer at AntBuddy JSC (01/2026 – present).",
+      "Call system: integrated CRM call history, showed customer name in call history, fixed call type handling and auto-save race conditions, fixed FCM token cleanup on signout to prevent calls being received after logout.",
+      "TikTok channel: added TikTok messaging support and UI, implemented filter for TikTok conversations, rendered lead questions and answers in message container.",
+      "Omni-channel inbox: updated action menu to conditionally show reply/forward based on message channel, added copy text functionality.",
+      "Push notifications: fixed device token registration/unregistration lifecycle on iOS and Android — ensuring correct behavior on login, signout, and SwitchCompany.",
+      "Tickets: added navigation to Tickets screen with initial filter for assigned tickets.",
+      "Cross-platform maintenance across saas-android and saas-ios branches. Repository is private — production product at AntBuddy JSC."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "AntBuddy Autotest — E2E Mobile Automation",
+    "category": "fullstack",
+    "date": "06/2026",
+    "technologies": [
+      "Playwright",
+      "Appium",
+      "WebDriverIO",
+      "Tesseract.js",
+      "JavaScript",
+      "Android / iOS"
+    ],
+    "summary": "End-to-end automation test framework for AntBuddy's Zalo OA FlowBot. 83 UAT specs covering onboarding, bot flows, and CRM API verification on real iOS/Android devices.",
+    "image": "https://placehold.co/800x500/065f46/ffffff?text=AntBuddy+Autotest",
+    "images": [
+      "https://placehold.co/800x500/065f46/ffffff?text=Playwright+%2B+Appium",
+      "https://placehold.co/800x500/064e3b/ffffff?text=83+UAT+Test+Cases",
+      "https://placehold.co/800x500/022c22/ffffff?text=HTML+%2F+Excel+Report"
+    ],
+    "github": "#",
+    "live": "#",
+    "content": [
+      "Role: Frontend Developer at AntBuddy JSC — built and maintained the automation test framework.",
+      "Architecture: Playwright as test runner orchestrating Appium (XCUITest on iOS, UiAutomator2 on Android) via WebDriverIO for real-device control.",
+      "Covered 83 UAT test specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
+      "CRM API verification layer: each test validates backend state via CRM/Omni API in addition to UI assertions (dual-layer verification).",
+      "OCR integration using Tesseract.js to read text content directly from device screenshots when Appium selectors are not reliable.",
+      "Report pipeline: HTML report, JSON result, Excel export, auto-generated dashboard, and ZIP artifact — all from a single npm run report:full command.",
+      "Custom utility modules: bot-assertions.js (keyword normalization + Vietnamese diacritic-insensitive matching), zalo-actions.js, crm-api-helper.js, android-bottom-sheet.js.",
+      "Repository is private — internal tooling at AntBuddy JSC."
+    ]
+  },
+  {
     "id": 1,
     "title": "Linora Social Network",
     "category": "realtime",
