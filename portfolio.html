@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script>
+    (function(){
+      var s = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', s || sys);
+    })();
+  </script>
+
   <title>Projects | Nguyễn Quốc Huy</title>
   <meta name="description" content="Selected product projects by Nguyễn Quốc Huy: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
+  <link rel="canonical" href="https://nqhuy.dev/portfolio.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nqhuy.dev/portfolio.html" />
+  <meta property="og:title" content="Projects | Nguyễn Quốc Huy" />
+  <meta property="og:description" content="Selected product projects: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
+  <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projects | Nguyễn Quốc Huy" />
+  <meta name="twitter:description" content="Selected product projects: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
+  <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/portfolio.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
@@ -12,44 +34,48 @@
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
-    <nav>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
+    <nav aria-label="Main navigation">
       <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html" class="">About</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-          <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="contact.html" class="">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
-  <div class="mobile-menu" id="mobile-menu"></div>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
 <main>
   <div class="container">
 
-<section>
+<section aria-labelledby="projects-heading">
   <p class="eyebrow">Projects</p>
-  <h1>Selected product work.</h1>
+  <h1 id="projects-heading">Selected product work.</h1>
   <p>Scope, stack, and impact are summarized from CV experience. Private repositories are marked as unavailable.</p>
-  <div class="filters">
-    <button class="btn filter active" data-filter="all">All</button>
-    <button class="btn filter" data-filter="mobile">Mobile</button>
-    <button class="btn filter" data-filter="fullstack">Fullstack</button>
-    <button class="btn filter" data-filter="realtime">Realtime</button>
+  <div class="filters" role="group" aria-label="Filter projects by category">
+    <button class="btn filter active" data-filter="all" aria-pressed="true">All</button>
+    <button class="btn filter" data-filter="mobile" aria-pressed="false">Mobile</button>
+    <button class="btn filter" data-filter="fullstack" aria-pressed="false">Fullstack</button>
+    <button class="btn filter" data-filter="realtime" aria-pressed="false">Realtime</button>
   </div>
-  <div class="grid cols-3" id="project-list"></div>
+  <div class="grid cols-3" id="project-list" aria-live="polite" aria-label="Project list"></div>
 </section>
 
   </div>
 </main>
 <footer>
-  <div class="container">
-    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML · CSS · JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/professional.js"></script>
 </body>

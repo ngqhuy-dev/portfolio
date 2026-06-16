@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script>
+    (function(){
+      var s = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', s || sys);
+    })();
+  </script>
+
   <title>Contact | Nguyễn Quốc Huy</title>
-  <meta name="description" content="Contact Nguyễn Quốc Huy for React, React Native, and product engineering work." />
+  <meta name="description" content="Contact Nguyễn Quốc Huy — frontend developer available for React, React Native, and fullstack work." />
+  <link rel="canonical" href="https://nqhuy.dev/contact.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nqhuy.dev/contact.html" />
+  <meta property="og:title" content="Contact | Nguyễn Quốc Huy" />
+  <meta property="og:description" content="Frontend developer available for React, React Native, and fullstack work. Get in touch." />
+  <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Nguyễn Quốc Huy" />
+  <meta name="twitter:description" content="Frontend developer available for React, React Native, and fullstack work." />
+  <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/contact.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
@@ -12,63 +34,116 @@
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
-    <nav>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
+    <nav aria-label="Main navigation">
       <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html" class="">About</a></li>
-          <li><a href="portfolio.html" class="">Projects</a></li>
-          <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
-  <div class="mobile-menu" id="mobile-menu"></div>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
 <main>
   <div class="container">
 
-<section>
+<section aria-labelledby="contact-heading">
   <p class="eyebrow">Contact</p>
-  <h1>Contact for product engineering work.</h1>
+  <h1 id="contact-heading">Get in touch.</h1>
   <div class="contact-layout">
     <div class="contact-list">
+      <a class="card contact-card" href="mailto:nguyenquochuy812003@gmail.com">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <div>
+          <strong>Email</strong><br/>
+          <span class="contact-value">nguyenquochuy812003@gmail.com</span>
+        </div>
+      </a>
+      <a class="card contact-card" href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">
+        <span class="contact-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+          </svg>
+        </span>
+        <div>
+          <strong>GitHub</strong><br/>
+          <span class="contact-value">github.com/ngqhuy-dev</span>
+        </div>
+      </a>
+      <a class="card contact-card" href="https://www.facebook.com/nqhuy.it" target="_blank" rel="noopener">
+        <span class="contact-icon" aria-hidden="true">fb</span>
+        <div>
+          <strong>Facebook</strong><br/>
+          <span class="contact-value">facebook.com/nqhuy.it</span>
+        </div>
+      </a>
+      <a class="card contact-card" href="https://bitbucket.org/crossplatformdev/workspace/projects/EJ" target="_blank" rel="noopener">
+        <span class="contact-icon" aria-hidden="true">bb</span>
+        <div>
+          <strong>Bitbucket</strong><br/>
+          <span class="contact-value">JinStore workspace</span>
+        </div>
+      </a>
       <div class="card contact-card">
-        <span class="contact-icon">M</span>
-        <div><strong>Email</strong><br/><a href="mailto:nguyenquochuy812003@gmail.com">nguyenquochuy812003@gmail.com</a></div>
-      </div>
-      <div class="card contact-card">
-        <span class="contact-icon">P</span>
-        <div><strong>Phone</strong><br/><a href="tel:+84832766413">0832 766 413</a></div>
-      </div>
-      <div class="card contact-card">
-        <span class="contact-icon">L</span>
-        <div><strong>Location</strong><br/>Huế, Vietnam</div>
-      </div>
-      <div class="card contact-card">
-        <span class="contact-icon">F</span>
-        <div><strong>Facebook</strong><br/><a href="https://www.facebook.com/nqhuy.it" target="_blank" rel="noopener">facebook.com/nqhuy.it</a></div>
+        <span class="contact-icon" aria-hidden="true">⊙</span>
+        <div>
+          <strong>Location</strong><br/>
+          <span class="contact-value">Huế, Vietnam</span>
+        </div>
       </div>
     </div>
-    <form id="contact-form" class="card">
+    <form
+      id="contact-form"
+      class="card"
+      action="#"
+      method="POST"
+      novalidate
+    >
       <div class="grid cols-2">
         <div>
           <label for="name">Name</label>
-          <input id="name" name="name" placeholder="Your name" required />
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+          />
         </div>
         <div>
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
         </div>
       </div>
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Share the role, product context, and expected scope."></textarea>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Role, project context, or just say hi."
+          required
+        ></textarea>
       </div>
-      <button class="btn primary" type="submit">Send</button>
-      <div class="success" id="success">This static form validates locally. Please email me directly to continue.</div>
-      <div class="error" id="error">Please fill in all fields.</div>
+      <button class="btn primary" type="submit">Send message</button>
+      <div class="success" id="success" role="status" aria-live="polite">
+        Thanks! I'll get back to you soon. You can also reach me directly at
+        <a href="mailto:nguyenquochuy812003@gmail.com">nguyenquochuy812003@gmail.com</a>.
+      </div>
+      <div class="error" id="error" role="alert" aria-live="assertive">
+        Please fill in all fields.
+      </div>
     </form>
   </div>
 </section>
@@ -76,11 +151,15 @@
   </div>
 </main>
 <footer>
-  <div class="container">
-    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML · CSS · JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/professional.js"></script>
 </body>

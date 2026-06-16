@@ -1,52 +1,99 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nguyễn Quốc Huy | Software Engineer</title>
-  <meta name="description" content="Portfolio of Nguyễn Quốc Huy, a software engineer working with React, React Native, API integration, authentication, realtime features, and product UI." />
+
+  <!-- FOUC prevention: set theme before CSS paints -->
+  <script>
+    (function(){
+      var s = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', s || sys);
+    })();
+  </script>
+
+  <title>Nguyễn Quốc Huy | Frontend Developer</title>
+  <meta name="description" content="Portfolio of Nguyễn Quốc Huy, a frontend developer working with React, React Native, API integration, OTP authentication, realtime features, and product UI." />
+  <link rel="canonical" href="https://nqhuy.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nqhuy.dev/" />
+  <meta property="og:title" content="Nguyễn Quốc Huy | Frontend Developer" />
+  <meta property="og:description" content="Frontend developer specializing in React and React Native. Shipped features across social, operations, events, and commerce products at Platinum Technology." />
+  <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nguyễn Quốc Huy | Frontend Developer" />
+  <meta name="twitter:description" content="Frontend developer specializing in React and React Native. Shipped features across social, operations, events, and commerce products." />
+  <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nguyễn Quốc Huy",
+    "jobTitle": "Frontend Developer",
+    "url": "https://nqhuy.dev",
+    "email": "nguyenquochuy812003@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Huế",
+      "addressCountry": "VN"
+    },
+    "sameAs": [
+      "https://github.com/ngqhuy-dev",
+      "https://bitbucket.org/crossplatformdev/workspace/projects/EJ"
+    ],
+    "knowsAbout": ["React", "React Native", "JavaScript", "TypeScript", "Node.js", "Redux Toolkit", "Zustand"]
+  }
+  </script>
 </head>
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
-    <nav>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
+    <nav aria-label="Main navigation">
       <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html" class="">About</a></li>
-          <li><a href="portfolio.html" class="">Projects</a></li>
-          <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="contact.html" class="">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
-  <div class="mobile-menu" id="mobile-menu"></div>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
 <main>
   <div class="container">
 
-<section class="hero fade-in">
+<section class="hero fade-in" aria-labelledby="hero-heading">
   <div>
-    <p class="eyebrow">Software Engineer</p>
-    <h1>React and React Native engineer focused on product reliability.</h1>
-    <p>I work on product features where UI state, API contracts, authentication, realtime updates, and failure handling need to stay predictable across web and mobile.</p>
+    <p class="eyebrow">Frontend Developer</p>
+    <h1 id="hero-heading">Building React and React Native features that ship.</h1>
+    <p>I work on product features close to real user flows — authentication, media upload, realtime sync, location tracking, chat, and payment integrations — across web and mobile.</p>
     <div class="hero-actions">
       <a class="btn primary" href="portfolio.html">View Projects</a>
-      <a class="btn" href="resume.html">See Experience</a>
-      <a class="btn" href="contact.html">Contact Me</a>
+      <a class="btn" href="resume.html">Experience</a>
+      <a class="btn" href="contact.html">Contact</a>
     </div>
-    <div class="stat-grid" style="margin-top:22px">
-      <div class="stat"><strong>80+</strong><span>QC issues closed across UI state, logic, and edge cases</span></div>
-      <div class="stat"><strong>40%</strong><span>Reported crash-rate reduction after stabilization work</span></div>
-      <div class="stat"><strong>4</strong><span>Product domains: social, operations, events, commerce</span></div>
+    <div class="stat-grid">
+      <div class="stat"><strong>80+</strong><span>QC issues resolved across UI state, logic, and crash-prone screens</span></div>
+      <div class="stat"><strong>40%</strong><span>Crash-rate reduction after stabilization work on Linora</span></div>
+      <div class="stat"><strong>4</strong><span>Product domains shipped: social, operations, events, commerce</span></div>
     </div>
   </div>
   <div class="hero-panel" aria-label="Developer profile summary">
-    <div class="hero-panel-top">
+    <div class="hero-panel-top" aria-hidden="true">
       <span class="hero-panel-dot"></span>
       <span class="hero-panel-dot"></span>
       <span class="hero-panel-dot"></span>
@@ -54,55 +101,84 @@
     <div class="hero-panel-body">
       <div class="signal">
         <strong>React / React Native</strong>
-        <p>Feature delivery for social, operations, event, and commerce flows.</p>
+        <p>Shipped features across social, operations, event, and commerce products at Platinum Technology.</p>
       </div>
       <div class="signal">
         <strong>Realtime & Auth</strong>
-        <p>OTP auth, like/comment sync, location tracking, chat, and FCM notifications.</p>
+        <p>Zalo OTP, realtime like/comment, location tracking, FCM push, and Rocket.Chat integration.</p>
       </div>
       <div class="signal">
-        <strong>API-driven Work</strong>
-        <p>React, Node.js, Express, MongoDB, PostgreSQL, Strapi, and third-party integrations.</p>
+        <strong>Fullstack context</strong>
+        <p>Node.js, Express, MongoDB, PostgreSQL — built and consumed APIs end-to-end on personal projects.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="projects-heading">
   <div class="section-head">
     <div>
       <p class="eyebrow">Selected work</p>
-      <h2>Selected product work.</h2>
+      <h2 id="projects-heading">Selected product work.</h2>
     </div>
     <p>Short case studies from product work and personal systems. Private repositories are marked clearly.</p>
   </div>
-  <div class="grid cols-3" id="featured-projects"></div>
-  <div style="margin-top:12px"><a class="btn" href="portfolio.html">See all projects</a></div>
+  <div class="grid cols-3" id="featured-projects" aria-live="polite" aria-label="Featured projects"></div>
+  <div class="section-cta"><a class="btn" href="portfolio.html">See all projects</a></div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="stack-heading">
   <div class="section-head">
     <div>
       <p class="eyebrow">Core stack</p>
-      <h2>Stack used in real features.</h2>
+      <h2 id="stack-heading">Stack used in real features.</h2>
     </div>
   </div>
   <div class="skill-grid">
-    <div class="card skill-card"><h3>Frontend</h3><div class="skill-list"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">TypeScript</span><span class="badge">React JS</span></div></div>
-    <div class="card skill-card"><h3>Mobile</h3><div class="skill-list"><span class="badge">React Native</span><span class="badge">Redux Toolkit</span><span class="badge">Axios API</span><span class="badge">OTP flows</span></div></div>
-    <div class="card skill-card"><h3>Backend</h3><div class="skill-list"><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">MongoDB</span><span class="badge">PostgreSQL</span><span class="badge">Strapi</span></div></div>
-    <div class="card skill-card"><h3>Tools</h3><div class="skill-list"><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">Bitbucket</span><span class="badge">Postman</span><span class="badge">Figma</span></div></div>
+    <div class="card skill-card">
+      <h3>Frontend</h3>
+      <div class="skill-list">
+        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+        <span class="badge">TypeScript</span><span class="badge">React JS</span><span class="badge">SCSS</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Mobile & State</h3>
+      <div class="skill-list">
+        <span class="badge">React Native</span><span class="badge">Redux Toolkit</span>
+        <span class="badge">Zustand</span><span class="badge">Axios API</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Backend</h3>
+      <div class="skill-list">
+        <span class="badge">Node.js</span><span class="badge">Express</span>
+        <span class="badge">MongoDB</span><span class="badge">PostgreSQL</span><span class="badge">Strapi</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Integrations & Tools</h3>
+      <div class="skill-list">
+        <span class="badge">Firebase</span><span class="badge">Rocket.Chat</span>
+        <span class="badge">Cloudinary</span><span class="badge">VNPay</span>
+        <span class="badge">Postman</span><span class="badge">Figma</span>
+      </div>
+    </div>
   </div>
 </section>
 
   </div>
 </main>
 <footer>
-  <div class="container">
-    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML · CSS · JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/professional.js"></script>
 </body>

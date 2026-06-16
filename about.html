@@ -1,10 +1,32 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Nguyễn Quốc Huy | Software Engineer</title>
-  <meta name="description" content="About Nguyễn Quốc Huy, a software engineer working with React, React Native, API integration, realtime behavior, and production UI." />
+
+  <script>
+    (function(){
+      var s = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', s || sys);
+    })();
+  </script>
+
+  <title>About | Nguyễn Quốc Huy</title>
+  <meta name="description" content="About Nguyễn Quốc Huy — frontend developer from Huế, working with React, React Native, OTP auth, realtime features, and product UI. Targeting fullstack." />
+  <link rel="canonical" href="https://nqhuy.dev/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nqhuy.dev/about.html" />
+  <meta property="og:title" content="About | Nguyễn Quốc Huy" />
+  <meta property="og:description" content="Frontend developer from Huế, Vietnam. Working with React, React Native, and fullstack JavaScript." />
+  <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | Nguyễn Quốc Huy" />
+  <meta name="twitter:description" content="Frontend developer from Huế, Vietnam. Working with React, React Native, and fullstack JavaScript." />
+  <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/about.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
@@ -12,26 +34,26 @@
 <body>
 <header>
   <div class="container nav">
-    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span style="color:var(--accent)">.dev</span></a></div>
-    <nav>
+    <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
+    <nav aria-label="Main navigation">
       <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="portfolio.html" class="">Projects</a></li>
-          <li><a href="resume.html" class="">Resume</a></li>
-          <li><a href="contact.html" class="">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
-  <div class="mobile-menu" id="mobile-menu"></div>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
 <main>
   <div class="container">
 
-<section class="profile fade-in">
-  <div class="hero-panel">
-    <div class="hero-panel-top">
+<section class="profile fade-in" aria-labelledby="about-heading">
+  <div class="hero-panel" aria-label="Profile summary">
+    <div class="hero-panel-top" aria-hidden="true">
       <span class="hero-panel-dot"></span>
       <span class="hero-panel-dot"></span>
       <span class="hero-panel-dot"></span>
@@ -39,66 +61,94 @@
     <div class="hero-panel-body">
       <div class="signal">
         <strong>Nguyễn Quốc Huy</strong>
-        <p>Software Engineer based in Huế, Vietnam.</p>
+        <p>Frontend Developer — Huế, Vietnam.</p>
       </div>
       <div class="signal">
-        <strong>Software Engineering</strong>
-        <p>Hue University of Sciences, 2021 - 2025.</p>
+        <strong>Platinum Technology</strong>
+        <p>Frontend Developer Intern, 03/2025 – 12/2025.</p>
       </div>
       <div class="signal">
-        <strong>Engineering focus</strong>
-        <p>Frontend-heavy product work with backend context.</p>
+        <strong>Target</strong>
+        <p>Fullstack — React, React Native, Node.js.</p>
       </div>
     </div>
   </div>
   <div>
     <p class="eyebrow">About</p>
-    <h1>Engineer for product UI, state, and integrations.</h1>
-    <p>I build React and React Native features that sit close to product logic: authentication, media upload, realtime events, notifications, chat, and admin workflows.</p>
-    <p>My work is strongest where the UI depends on reliable API behavior, clear state ownership, and careful handling of edge cases across web and mobile.</p>
+    <h1 id="about-heading">Frontend developer targeting fullstack.</h1>
+    <p>I build React and React Native features that sit close to real product logic — authentication, media upload, realtime sync, location tracking, push notifications, chat, and payment flows.</p>
+    <p>My internship at Platinum Technology (2025) gave me hands-on experience shipping across four product domains: social, operations, events, and commerce. I handle both the UI layer and the API wiring that keeps it reliable.</p>
     <div class="grid cols-2" style="margin-top:18px">
       <div class="card skill-card">
-        <h3>Engineering priorities</h3>
+        <h3>What I focus on</h3>
         <ul class="timeline-list">
           <li>State that is easy to trace and hard to desync.</li>
-          <li>API and realtime flows with explicit failure states.</li>
-          <li>Small fixes that preserve existing product behavior.</li>
+          <li>Realtime and async flows with explicit failure states.</li>
+          <li>Changes that preserve existing product behavior.</li>
         </ul>
       </div>
       <div class="card skill-card">
         <h3>Education</h3>
         <ul class="timeline">
-          <li><strong>Software Engineering</strong> — Hue University of Sciences, 2021 - 2025</li>
-          <li>Bachelor degree, good classification. GPA: 2.79.</li>
+          <li><strong>Software Engineering</strong> — Hue University of Sciences, 2021–2025</li>
+          <li>Bachelor's degree, good classification (Khá). GPA: 2.79 / 4.0.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="skills-heading">
   <div class="section-head">
     <div>
       <p class="eyebrow">Skills</p>
-      <h2>Technical stack.</h2>
+      <h2 id="skills-heading">Technical stack.</h2>
     </div>
   </div>
   <div class="skill-grid">
-    <div class="card skill-card"><h3>Frontend</h3><div class="skill-list"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">TypeScript</span><span class="badge">React JS</span></div></div>
-    <div class="card skill-card"><h3>Mobile & State</h3><div class="skill-list"><span class="badge">React Native</span><span class="badge">Redux Toolkit</span><span class="badge">Zustand</span><span class="badge">Axios API</span></div></div>
-    <div class="card skill-card"><h3>Backend & Data</h3><div class="skill-list"><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">MongoDB</span><span class="badge">PostgreSQL</span></div></div>
-    <div class="card skill-card"><h3>Integrations</h3><div class="skill-list"><span class="badge">Firebase</span><span class="badge">Rocket.Chat API</span><span class="badge">Strapi</span><span class="badge">Cloudinary</span><span class="badge">VNPay</span></div></div>
+    <div class="card skill-card">
+      <h3>Frontend</h3>
+      <div class="skill-list">
+        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+        <span class="badge">TypeScript</span><span class="badge">React JS</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Mobile & State</h3>
+      <div class="skill-list">
+        <span class="badge">React Native</span><span class="badge">Redux Toolkit</span>
+        <span class="badge">Zustand</span><span class="badge">Axios API</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Backend & Data</h3>
+      <div class="skill-list">
+        <span class="badge">Node.js</span><span class="badge">Express</span>
+        <span class="badge">MongoDB</span><span class="badge">PostgreSQL</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3>Integrations</h3>
+      <div class="skill-list">
+        <span class="badge">Firebase</span><span class="badge">Rocket.Chat API</span>
+        <span class="badge">Strapi</span><span class="badge">Cloudinary</span><span class="badge">VNPay</span>
+      </div>
+    </div>
   </div>
 </section>
 
   </div>
 </main>
 <footer>
-  <div class="container">
-    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML • CSS • JavaScript.</div>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Nguyễn Quốc Huy. Built with HTML · CSS · JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/professional.js"></script>
 </body>

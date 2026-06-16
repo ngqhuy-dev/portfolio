@@ -1,1 +1,396 @@
-(function(){ (function setupHamburger(){ const header = document.querySelector('header .nav'); const themeBtn = document.querySelector('.theme-toggle'); if (!header || !themeBtn) return; const ham = document.createElement('button'); ham.className = 'hamburger'; ham.setAttribute('aria-expanded', 'false'); ham.setAttribute('aria-label', 'Toggle menu'); ham.textContent = '☰'; themeBtn.parentNode.insertBefore(ham, themeBtn); const desktopList = document.querySelector('header nav ul'); const mobileWrap = document.getElementById('mobile-menu'); if (desktopList && mobileWrap) { const cloned = desktopList.cloneNode(true); mobileWrap.innerHTML = ''; mobileWrap.appendChild(cloned); } const mobileMenu = document.getElementById('mobile-menu'); function openMenu(){ mobileMenu.classList.add('open'); ham.setAttribute('aria-expanded', 'true'); ham.textContent = '✕'; document.body.style.overflow = 'hidden'; } function closeMenu(){ mobileMenu.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); ham.textContent = '☰'; document.body.style.overflow = ''; } function toggleMenu(){ const isOpen = ham.getAttribute('aria-expanded') === 'true'; isOpen ? closeMenu() : openMenu(); } ham.addEventListener('click', toggleMenu); mobileMenu.addEventListener('click', (e) => { if (e.target.tagName.toLowerCase() === 'a') closeMenu(); }); document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeMenu(); }); document.addEventListener('click', (e)=>{ if (mobileMenu.classList.contains('open')){ const withinMenu = mobileMenu.contains(e.target); const isHam = ham.contains(e.target); if (!withinMenu && !isHam) closeMenu(); } }); const observer = new MutationObserver(()=>{ const list = document.querySelector('header nav ul'); if (list && mobileWrap && mobileWrap.querySelectorAll('ul').length === 0){ mobileWrap.appendChild(list.cloneNode(true)); } }); observer.observe(document.querySelector('header nav'), {childList: true, subtree: true}); })(); const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear(); const root = document.documentElement; const stored = localStorage.getItem('theme'); const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; const startTheme = stored || (prefersDark ? 'dark' : 'light'); root.setAttribute('data-theme', startTheme); document.querySelectorAll('.theme-toggle').forEach(btn => { btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌓'; btn.addEventListener('click', () => { const current = root.getAttribute('data-theme') || 'light'; const next = current === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', next); localStorage.setItem('theme', next); btn.textContent = next === 'dark' ? '🌞' : '🌓'; }); }); function getParam(name) { const url = new URL(window.location.href); return url.searchParams.get(name); } if (document.getElementById('featured-projects')) { $.getJSON('assets/data/projects.json', function(data){ const featured = data.slice(0, 3); const wrap = $('#featured-projects'); featured.forEach(p => { wrap.append(` <article class="card project-card"> <a href="project.html?id=${p.id}"><img src="${p.image}" alt="${p.title}" /></a> <h3><a href="project.html?id=${p.id}">${p.title}</a></h3> <div class="meta">${p.category.toUpperCase()} • ${p.date}</div> <div>${p.technologies.map(t => `<span class="badge">${t}</span>`).join('')}</div> </article>`); }); }); $.getJSON('assets/data/posts.json', function(data){ const latest = data.slice(0,3); const wrap = $('#latest-posts'); latest.forEach(post => { wrap.append(` <article class="card post-card"> <a href="post.html?id=${post.id}"><img src="${post.hero}" alt="${post.title}"/></a> <h3><a href="post.html?id=${post.id}">${post.title}</a></h3> <div class="meta">${post.date} • ${post.tags.map(t=>`<span class="tag">#${t}</span>`).join(' ')}</div> <p>${post.excerpt}</p> </article>`); }); }); } if (document.getElementById('project-list')) { let all = []; const wrap = $('#project-list'); function render(items){ wrap.empty(); items.forEach(p => { wrap.append(` <article class="card project-card"> <a href="project.html?id=${p.id}"><img src="${p.image}" alt="${p.title}" /></a> <h3><a href="project.html?id=${p.id}">${p.title}</a></h3> <div class="meta">${p.category.toUpperCase()} • ${p.date}</div> <p>${p.summary}</p> <div>${p.technologies.map(t => `<span class="badge">${t}</span>`).join('')}</div> </article>`); }); } $.getJSON('assets/data/projects.json', function(data){ all = data; render(all); }); $('.filter').on('click', function(){ $('.filter').removeClass('active'); $(this).addClass('active'); const type = $(this).data('filter'); if (type === 'all') render(all); else render(all.filter(p => p.category === type)); }); } if (document.getElementById('project')) { const id = parseInt(getParam('id'), 10); $.getJSON('assets/data/projects.json', function(data){ const proj = data.find(p => p.id === id) || data[0]; $('#project').html(` <div class="project-hero"> <div> <h1>${proj.title}</h1> <div class="meta">${proj.category.toUpperCase()} • ${proj.date}</div> <div style="margin:8px 0">${proj.technologies.map(t => `<span class="badge">${t}</span>`).join('')}</div> <p>${proj.summary}</p> <div style="display:flex; gap:10px; margin-top:6px"> <a class="btn" href="${proj.github}" target="_blank" rel="noopener">GitHub</a> <a class="btn primary" href="${proj.live}" target="_blank" rel="noopener">Live</a> </div> </div> <div><img src="${proj.image}" alt="${proj.title}"/></div> </div> <hr/> <div class="gallery"> ${proj.images.map(src => `<img src="${src}" alt="${proj.title} screenshot"/>`).join('')} </div> <section class="post-body"> ${proj.content.map(p => `<p>${p}</p>`).join('')} </section> `); }); } if (document.getElementById('post-list')) { let all = []; const wrap = $('#post-list'); function render(items){ wrap.empty(); items.forEach(post => { wrap.append(` <article class="card post-card"> <a href="post.html?id=${post.id}"><img src="${post.hero}" alt="${post.title}" /></a> <h3><a href="post.html?id=${post.id}">${post.title}</a></h3> <div class="meta">${post.date} • ${post.tags.map(t=>`<span class="tag">#${t}</span>`).join(' ')}</div> <p>${post.excerpt}</p> </article>`); }); } $.getJSON('assets/data/posts.json', function(data){ all = data; render(all); }); $('#search').on('input', function(){ const q = $(this).val().toLowerCase(); render(all.filter(p => p.title.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q)))); }); } if (document.getElementById('post')) { const id = parseInt(getParam('id'), 10); $.getJSON('assets/data/posts.json', function(data){ const post = data.find(p => p.id === id) || data[0]; $('#post').html(` <header class="post-hero"> <img src="${post.hero}" alt="${post.title}" /> <h1>${post.title}</h1> <div class="meta">${post.date} • ${post.author} • ${post.tags.map(t=>`<span class="tag">#${t}</span>`).join(' ')}</div> </header> <section class="post-body"> ${post.content.map(p => `<p>${p}</p>`).join('')} </section> `); }); } if (document.getElementById('testimonials')) { $.getJSON('assets/data/testimonials.json', function(data){ const wrap = $('#testimonials'); data.forEach(t => { wrap.append(` <div class="card testimonial"> <img class="avatar" src="${t.avatar}" alt="${t.name}" /> <div> <strong>${t.name}</strong> • ${t.role}, ${t.company} <p class="quote">"${t.quote}"</p> </div> </div> `); }); }); } if (document.getElementById('contact-form')) { $('#contact-form').on('submit', function(e){ e.preventDefault(); const name = $('#name').val().trim(); const email = $('#email').val().trim(); const msg = $('#message').val().trim(); if (!name || !email || !msg) { $('#error').show(); $('#success').hide(); return; } $('#error').hide(); $('#success').show(); this.reset(); }); } })();
+(function () {
+  /* ── Hamburger menu ── */
+  (function setupHamburger() {
+    const header = document.querySelector('header .nav');
+    const themeBtn = document.querySelector('.theme-toggle');
+    if (!header || !themeBtn) return;
+
+    const ham = document.createElement('button');
+    ham.className = 'hamburger';
+    ham.setAttribute('aria-expanded', 'false');
+    ham.setAttribute('aria-label', 'Toggle menu');
+    ham.textContent = '☰';
+    themeBtn.parentNode.insertBefore(ham, themeBtn);
+
+    const desktopList = document.querySelector('header nav ul');
+    const mobileWrap = document.getElementById('mobile-menu');
+    if (desktopList && mobileWrap) {
+      mobileWrap.appendChild(desktopList.cloneNode(true));
+    }
+
+    function openMenu() {
+      mobileWrap.classList.add('open');
+      ham.setAttribute('aria-expanded', 'true');
+      ham.textContent = '✕';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileWrap.classList.remove('open');
+      ham.setAttribute('aria-expanded', 'false');
+      ham.textContent = '☰';
+      document.body.style.overflow = '';
+    }
+
+    ham.addEventListener('click', () => {
+      ham.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+    });
+
+    mobileWrap.addEventListener('click', (e) => {
+      if (e.target.tagName.toLowerCase() === 'a') closeMenu();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        mobileWrap.classList.contains('open') &&
+        !mobileWrap.contains(e.target) &&
+        !ham.contains(e.target)
+      ) closeMenu();
+    });
+  })();
+
+  /* ── Footer year ── */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── Theme toggle (FOUC prevention is in <head>; this only wires the button) ── */
+  const root = document.documentElement;
+  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+    btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌓';
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '🌞' : '🌓';
+    });
+  });
+
+  /* ── Active nav: set aria-current dynamically ── */
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('header nav a, .mobile-menu a').forEach((a) => {
+    if (a.getAttribute('href') === currentPage) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    } else {
+      a.classList.remove('active');
+      a.removeAttribute('aria-current');
+    }
+  });
+
+  /* ── Helpers ── */
+  function loadJSON(url) {
+    return fetch(url).then((r) => {
+      if (!r.ok) throw new Error('Failed to load ' + url);
+      return r.json();
+    });
+  }
+
+  function getParam(name) {
+    return new URL(window.location.href).searchParams.get(name);
+  }
+
+  function el(tag, attrs, children) {
+    const node = document.createElement(tag);
+    if (attrs) Object.entries(attrs).forEach(([k, v]) => {
+      if (k === 'className') node.className = v;
+      else if (k === 'textContent') node.textContent = v;
+      else node.setAttribute(k, v);
+    });
+    if (children) children.forEach((c) => c && node.appendChild(c));
+    return node;
+  }
+
+  function txt(text) { return document.createTextNode(text); }
+
+  function badgeList(items) {
+    const wrap = el('div');
+    items.forEach((t) => {
+      const b = el('span', { className: 'badge', textContent: t });
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+
+  /* ── Project card (XSS-safe via DOM API) ── */
+  function createProjectCard(p) {
+    const img = el('img', {
+      src: p.image,
+      alt: p.title,
+      loading: 'lazy',
+      decoding: 'async',
+      width: '800',
+    });
+    const imgLink = el('a', { href: 'project.html?id=' + p.id, className: 'project-card-img-wrap' }, [img]);
+
+    const meta = el('div', { className: 'meta', textContent: p.category.toUpperCase() + ' • ' + p.date });
+    const titleLink = el('a', { href: 'project.html?id=' + p.id, textContent: p.title });
+    const h3 = el('h3', null, [titleLink]);
+    const summary = el('p', { className: 'project-summary', textContent: p.summary });
+    const badges = badgeList(p.technologies);
+
+    const body = el('div', { className: 'project-card-body' }, [meta, h3, summary, badges]);
+    const article = el('article', { className: 'card project-card' }, [imgLink, body]);
+    return article;
+  }
+
+  /* ── Post card (XSS-safe) ── */
+  function createPostCard(post) {
+    const img = el('img', {
+      src: post.hero,
+      alt: post.title,
+      loading: 'lazy',
+      decoding: 'async',
+    });
+    const imgLink = el('a', { href: 'post.html?id=' + post.id }, [img]);
+
+    const titleLink = el('a', { href: 'post.html?id=' + post.id, textContent: post.title });
+    const h3 = el('h3', null, [titleLink]);
+
+    const tagSpans = post.tags.map((t) => el('span', { className: 'tag', textContent: '#' + t }));
+    const meta = el('div', { className: 'meta' });
+    meta.appendChild(txt(post.date + ' • '));
+    tagSpans.forEach((s) => { meta.appendChild(s); meta.appendChild(txt(' ')); });
+
+    const excerpt = el('p', { textContent: post.excerpt });
+
+    return el('article', { className: 'card post-card' }, [imgLink, h3, meta, excerpt]);
+  }
+
+  /* ── Home: featured projects ── */
+  const featuredEl = document.getElementById('featured-projects');
+  if (featuredEl) {
+    loadJSON('assets/data/projects.json').then((data) => {
+      data.slice(0, 3).forEach((p) => featuredEl.appendChild(createProjectCard(p)));
+    });
+  }
+
+  /* ── Portfolio: project list + filter ── */
+  const projectListEl = document.getElementById('project-list');
+  if (projectListEl) {
+    let allProjects = [];
+
+    function renderProjects(items) {
+      projectListEl.innerHTML = '';
+      items.forEach((p) => projectListEl.appendChild(createProjectCard(p)));
+    }
+
+    loadJSON('assets/data/projects.json').then((data) => {
+      allProjects = data;
+      renderProjects(allProjects);
+    });
+
+    document.querySelectorAll('.filter').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach((b) => {
+          b.classList.remove('active');
+          b.removeAttribute('aria-pressed');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        const type = btn.dataset.filter;
+        renderProjects(type === 'all' ? allProjects : allProjects.filter((p) => p.category === type));
+      });
+    });
+
+    // Initial active state
+    const initialActive = document.querySelector('.filter.active');
+    if (initialActive) initialActive.setAttribute('aria-pressed', 'true');
+  }
+
+  /* ── Project detail ── */
+  const projectEl = document.getElementById('project');
+  if (projectEl) {
+    const id = parseInt(getParam('id'), 10);
+    loadJSON('assets/data/projects.json').then((data) => {
+      const proj = data.find((p) => p.id === id) || data[0];
+
+      const h1 = el('h1', { textContent: proj.title });
+      const meta = el('div', {
+        className: 'meta',
+        textContent: proj.category.toUpperCase() + ' • ' + proj.date,
+      });
+      const badges = badgeList(proj.technologies);
+      badges.style.margin = '8px 0';
+
+      const summary = el('p', { textContent: proj.summary });
+
+      const ghBtn = el('a', {
+        className: 'btn',
+        href: proj.github,
+        target: '_blank',
+        rel: 'noopener',
+        textContent: 'Source',
+      });
+      const liveBtn = el('a', {
+        className: 'btn primary',
+        href: proj.live,
+        target: '_blank',
+        rel: 'noopener',
+        textContent: 'Live',
+      });
+      const actions = el('div', { className: 'project-actions' }, [ghBtn, liveBtn]);
+
+      const heroLeft = el('div', null, [h1, meta, badges, summary, actions]);
+
+      const heroImg = el('img', {
+        src: proj.image,
+        alt: proj.title,
+        loading: 'eager',
+        decoding: 'async',
+        width: '800',
+        height: '500',
+      });
+      const heroRight = el('div', null, [heroImg]);
+
+      const hero = el('div', { className: 'project-hero' }, [heroLeft, heroRight]);
+      const hr = el('hr');
+
+      const gallery = el('div', { className: 'gallery' });
+      proj.images.forEach((src, i) => {
+        gallery.appendChild(el('img', {
+          src,
+          alt: proj.title + ' screenshot ' + (i + 1),
+          loading: 'lazy',
+          decoding: 'async',
+        }));
+      });
+
+      const body = el('section', { className: 'post-body' });
+      proj.content.forEach((p) => body.appendChild(el('p', { textContent: p })));
+
+      projectEl.append(hero, hr, gallery, body);
+    });
+  }
+
+  /* ── Blog: post list + search ── */
+  const postListEl = document.getElementById('post-list');
+  if (postListEl) {
+    let allPosts = [];
+
+    function renderPosts(items) {
+      postListEl.innerHTML = '';
+      items.forEach((post) => postListEl.appendChild(createPostCard(post)));
+    }
+
+    loadJSON('assets/data/posts.json').then((data) => {
+      allPosts = data;
+      renderPosts(allPosts);
+    });
+
+    const searchEl = document.getElementById('search');
+    if (searchEl) {
+      searchEl.addEventListener('input', () => {
+        const q = searchEl.value.toLowerCase();
+        renderPosts(
+          allPosts.filter(
+            (p) =>
+              p.title.toLowerCase().includes(q) ||
+              p.tags.some((t) => t.toLowerCase().includes(q))
+          )
+        );
+      });
+    }
+  }
+
+  /* ── Post detail ── */
+  const postEl = document.getElementById('post');
+  if (postEl) {
+    const id = parseInt(getParam('id'), 10);
+    loadJSON('assets/data/posts.json').then((data) => {
+      const post = data.find((p) => p.id === id) || data[0];
+
+      const img = el('img', {
+        src: post.hero,
+        alt: post.title,
+        loading: 'eager',
+        decoding: 'async',
+      });
+      const h1 = el('h1', { textContent: post.title });
+      const tagSpans = post.tags.map((t) => el('span', { className: 'tag', textContent: '#' + t }));
+      const meta = el('div', { className: 'meta' });
+      meta.appendChild(txt(post.date + ' • ' + post.author + ' • '));
+      tagSpans.forEach((s) => { meta.appendChild(s); meta.appendChild(txt(' ')); });
+
+      const postHeader = el('header', { className: 'post-hero' }, [img, h1, meta]);
+
+      const body = el('section', { className: 'post-body' });
+      post.content.forEach((p) => body.appendChild(el('p', { textContent: p })));
+
+      postEl.append(postHeader, body);
+    });
+  }
+
+  /* ── Testimonials ── */
+  const testimonialEl = document.getElementById('testimonials');
+  if (testimonialEl) {
+    loadJSON('assets/data/testimonials.json').then((data) => {
+      data.forEach((t) => {
+        const avatar = el('img', {
+          className: 'avatar',
+          src: t.avatar,
+          alt: t.name,
+          loading: 'lazy',
+          decoding: 'async',
+          width: '48',
+          height: '48',
+        });
+        const name = el('strong', { textContent: t.name + ' • ' + t.role + ', ' + t.company });
+        const quote = el('p', { className: 'quote', textContent: '"' + t.quote + '"' });
+        const info = el('div', null, [name, quote]);
+        const card = el('div', { className: 'card testimonial' }, [avatar, info]);
+        testimonialEl.appendChild(card);
+      });
+    });
+  }
+
+  /* ── Contact form (Formspree) ── */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const successEl = document.getElementById('success');
+      const errorEl = document.getElementById('error');
+
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+
+      const name = contactForm.querySelector('#name').value.trim();
+      const email = contactForm.querySelector('#email').value.trim();
+      const msg = contactForm.querySelector('#message').value.trim();
+
+      if (!name || !email || !msg) {
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      const action = contactForm.getAttribute('action');
+
+      // If no Formspree action configured, fall back to mailto guidance
+      if (!action || action === '#') {
+        successEl.style.display = 'block';
+        contactForm.reset();
+        return;
+      }
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          successEl.style.display = 'block';
+          contactForm.reset();
+        } else {
+          errorEl.style.display = 'block';
+        }
+      } catch {
+        errorEl.style.display = 'block';
+      }
+    });
+  }
+})();

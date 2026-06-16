@@ -3,35 +3,35 @@
     "id": 1,
     "title": "Linora Social Network",
     "category": "realtime",
-    "date": "2025-06-01",
+    "date": "06/2025",
     "technologies": [
       "React Native",
       "Redux Toolkit",
-      "Axios API",
+      "Axios",
       "Zalo OTP",
       "Realtime"
     ],
-    "summary": "Social product work covering media upload, realtime engagement, social connections, and Zalo OTP authentication.",
+    "summary": "Social product for community connection. Worked on crash stabilization, media upload, realtime engagement, and Zalo OTP authentication.",
     "image": "https://placehold.co/800x500/0f766e/ffffff?text=Linora+Social+Network",
     "images": [
       "https://placehold.co/800x500/0f766e/ffffff?text=Media+Upload+Flow",
-      "https://placehold.co/800x500/115e59/ffffff?text=Realtime+Like+Comment",
+      "https://placehold.co/800x500/115e59/ffffff?text=Realtime+Like+%2F+Comment",
       "https://placehold.co/800x500/134e4a/ffffff?text=Social+Connection"
     ],
     "github": "#",
     "live": "#",
     "content": [
-      "Role: Frontend Developer Intern at Platinum Technology.",
-      "Closed QC issues in UI state, interaction logic, and crash-prone flows; reported crash rate decreased by 40%.",
-      "Worked on media upload, realtime like/comment behavior, social connections, and Zalo OTP authentication.",
-      "Repository and live URL are private."
+      "Role: Frontend Developer Intern at Platinum Technology (06/2025 – 12/2025).",
+      "Closed 80+ QC issues in UI state, interaction logic, and crash-prone flows. Reported crash rate dropped by 40% after stabilization.",
+      "Implemented media upload, realtime like/comment sync, social connection flows, and Zalo OTP authentication for Vietnamese users.",
+      "Repository is private — part of a client product at Platinum Technology."
     ]
   },
   {
     "id": 2,
-    "title": "Gas Thanh Giong Management",
+    "title": "Gas Thánh Giong — Operations System",
     "category": "mobile",
-    "date": "2025-07-01",
+    "date": "07/2025",
     "technologies": [
       "React Native",
       "Firebase Cloud Messaging",
@@ -39,83 +39,87 @@
       "OTP",
       "Web Admin"
     ],
-    "summary": "Operations product for gas technicians with mobile workflows, OTP identification, realtime location, notifications, and admin updates.",
-    "image": "https://placehold.co/800x500/1d4ed8/ffffff?text=Gas+Management",
+    "summary": "Field operations platform for gas technicians. Mobile app with OTP identity, realtime KTV location tracking, and FCM push notifications for order status.",
+    "image": "https://placehold.co/800x500/1d4ed8/ffffff?text=Gas+Th%C3%A1nh+Gi%C3%B2ng",
     "images": [
       "https://placehold.co/800x500/1d4ed8/ffffff?text=Technician+Mobile+Flow",
-      "https://placehold.co/800x500/1e40af/ffffff?text=Realtime+Location",
-      "https://placehold.co/800x500/1e3a8a/ffffff?text=Order+Status+Notification"
+      "https://placehold.co/800x500/1e40af/ffffff?text=Realtime+Location+Tracking",
+      "https://placehold.co/800x500/1e3a8a/ffffff?text=FCM+Order+Notifications"
     ],
     "github": "#",
     "live": "#",
     "content": [
-      "Built mobile flows for technician operations and OTP-based identity verification.",
-      "Implemented realtime location tracking and Firebase Cloud Messaging for order-status updates.",
-      "Updated web admin features without changing the existing operational flow.",
-      "Repository and live URL are private."
+      "Role: Frontend Developer Intern at Platinum Technology.",
+      "Built complete mobile business flow for technician operations including OTP-based identity verification.",
+      "Implemented realtime KTV location tracking and integrated Firebase Cloud Messaging (FCM) to push order-status updates instantly.",
+      "Updated several features on the web admin without breaking existing operational flows.",
+      "Repository is private — part of a client product at Platinum Technology."
     ]
   },
   {
     "id": 3,
-    "title": "Event Flow",
+    "title": "Event Flow — Event Management Platform",
     "category": "fullstack",
-    "date": "2025-08-01",
+    "date": "08/2025",
     "technologies": [
       "React JS",
       "Node.js",
       "Express",
       "QR Check-in",
-      "Invitation System"
+      "Digital Invitation"
     ],
-    "summary": "Event platform with QR check-in, scoring workflows, submission management, and generated digital invitations.",
+    "summary": "Fullstack event platform supporting large-scale events. QR check-in, scoring, submission management, and auto-generated digital invitations.",
     "image": "https://placehold.co/800x500/7c3aed/ffffff?text=Event+Flow",
     "images": [
       "https://placehold.co/800x500/7c3aed/ffffff?text=QR+Check-in",
       "https://placehold.co/800x500/6d28d9/ffffff?text=Submission+Management",
-      "https://placehold.co/800x500/5b21b6/ffffff?text=Digital+Invitation"
+      "https://placehold.co/800x500/5b21b6/ffffff?text=Digital+Invitation+Generator"
     ],
     "github": "#",
     "live": "#",
     "content": [
-      "Built frontend and backend features with React.js and Node.js.",
-      "Implemented submission management and automatic digital invitation generation.",
-      "Reduced event check-in friction through QR-based entry flow.",
-      "Repository and live URL are private."
+      "Role: Frontend Developer Intern at Platinum Technology.",
+      "Built fullstack features using React.js (frontend) and Node.js / Express (backend).",
+      "Designed and implemented a scoring and submission management system for large-scale events.",
+      "Built QR-based check-in flow to reduce event entry friction and wait time.",
+      "Implemented automatic digital invitation generation for attendees.",
+      "Repository is private — part of a client product at Platinum Technology."
     ]
   },
   {
     "id": 4,
-    "title": "Kyn Group Internal Chat",
+    "title": "Kyn Group — Internal Chat",
     "category": "realtime",
-    "date": "2025-09-01",
+    "date": "09/2025",
     "technologies": [
+      "React Native",
       "Rocket.Chat API",
       "Redux Toolkit",
-      "React Native",
-      "Realtime Chat",
+      "WebSocket",
       "State Management"
     ],
-    "summary": "Internal chat integration using Rocket.Chat API with centralized conversation state and realtime message synchronization.",
+    "summary": "In-app internal chat built on Rocket.Chat API. Centralized Redux Toolkit state for real-time message sync across high-volume conversations.",
     "image": "https://placehold.co/800x500/be123c/ffffff?text=Kyn+Group+Chat",
     "images": [
-      "https://placehold.co/800x500/be123c/ffffff?text=Rocket.Chat+API",
+      "https://placehold.co/800x500/be123c/ffffff?text=Rocket.Chat+Integration",
       "https://placehold.co/800x500/9f1239/ffffff?text=Conversation+State",
       "https://placehold.co/800x500/881337/ffffff?text=Realtime+Messages"
     ],
     "github": "#",
     "live": "#",
     "content": [
-      "Worked with a Tech Lead on complex chat data flows.",
-      "Integrated internal chat through Rocket.Chat API.",
-      "Managed conversation state with Redux Toolkit to keep message data synchronized.",
-      "Repository and live URL are private."
+      "Role: Frontend Developer Intern at Platinum Technology, working with Tech Lead.",
+      "Integrated Rocket.Chat API to deliver internal chat functionality within the mobile app.",
+      "Designed centralized Redux Toolkit state to manage conversation data and keep messages in sync under high message volume.",
+      "Handled complex async data flows with Tech Lead to ensure smooth performance.",
+      "Repository is private — part of a client product at Platinum Technology."
     ]
   },
   {
     "id": 5,
-    "title": "JinStore Cross-platform Sales System",
+    "title": "JinStore — Cross-platform Sales System",
     "category": "fullstack",
-    "date": "2025-02-01",
+    "date": "02/2025",
     "technologies": [
       "React JS",
       "React Native",
@@ -126,20 +130,21 @@
       "VNPay",
       "Cloudinary"
     ],
-    "summary": "Cross-platform commerce system with web, mobile, backend APIs, Google login, OTP verification, VNPay, Cloudinary, and WebSocket.",
+    "summary": "Personal fullstack commerce system with web and mobile apps. Google login, OTP, VNPay payment, Cloudinary storage, and WebSocket realtime updates.",
     "image": "https://placehold.co/800x500/ca8a04/111827?text=JinStore",
     "images": [
       "https://placehold.co/800x500/ca8a04/111827?text=Web+Storefront",
       "https://placehold.co/800x500/a16207/ffffff?text=Mobile+App",
-      "https://placehold.co/800x500/854d0e/ffffff?text=Payment+and+Storage"
+      "https://placehold.co/800x500/854d0e/ffffff?text=VNPay+%2B+Cloudinary"
     ],
     "github": "https://bitbucket.org/crossplatformdev/workspace/projects/EJ",
     "live": "#",
     "content": [
-      "Personal project started in 02/2025.",
-      "Implemented Google login, OTP verification, VNPay payment, and Cloudinary image storage.",
-      "Used React JS, React Native, SCSS, Redux Toolkit, Zustand, WebSocket, Node.js, Express, and MongoDB.",
-      "Bitbucket project link is listed from the CV."
+      "Personal project started 02/2025, ongoing.",
+      "Built web frontend (React JS + SCSS), mobile app (React Native), and REST API backend (Node.js + Express + MongoDB) from scratch.",
+      "Integrated Google OAuth login, OTP account verification, VNPay payment gateway, and Cloudinary for image storage.",
+      "State management: Redux Toolkit on mobile, Zustand on web. Realtime order updates via WebSocket.",
+      "Bitbucket workspace: bitbucket.org/crossplatformdev/workspace/projects/EJ"
     ]
   }
 ]

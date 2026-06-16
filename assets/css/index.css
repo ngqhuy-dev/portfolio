@@ -1,1 +1,41 @@
-.hero{display:grid;gap:20px;align-items:center;grid-template-columns:1.1fr;}.hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0;}.hero p{color:var(--muted);font-size:18px;}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;}.feature{display:flex;gap:14px;align-items:start;}.feature i{font-style:normal;font-weight:800;}@media (min-width:900px){.hero{grid-template-columns:1.1fr 0.9fr;}}@media (max-width:720px){.hero{grid-template-columns:1fr;gap:16px;}.feature{align-items:flex-start;}}
+/* ── Hero layout ── */
+.hero {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5.5vw, 60px);
+  line-height: 1.08;
+  margin: 0 0 14px;
+}
+
+.hero > div > p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 22px 0 0;
+}
+
+/* ── Hero panel (right column) ── */
+.hero-panel-body { gap: 10px; }
+
+/* ── Feature items ── */
+.feature { display: flex; gap: 14px; align-items: start; }
+.feature i { font-style: normal; font-weight: 800; }
+
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+}
+
+@media (max-width: 720px) {
+  .hero { gap: 24px; }
+}
