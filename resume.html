@@ -4,13 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script>
-    (function(){
-      var s = localStorage.getItem('theme');
-      document.documentElement.setAttribute('data-theme', s || 'dark');
-    })();
-  </script>
-
   <title>Resume | Nguyễn Quốc Huy</title>
   <meta name="description" content="Resume of Nguyễn Quốc Huy — frontend developer intern at Platinum Technology. React, React Native, OTP auth, realtime features, fullstack personal projects." />
   <link rel="canonical" href="https://nqhuy.dev/resume.html" />
@@ -26,6 +19,9 @@
   <meta name="twitter:description" content="Frontend developer intern at Platinum Technology. React, React Native, OTP auth, realtime features." />
   <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Inter+Tight:wght@800;900&family=JetBrains+Mono:wght@400;700&display=swap" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/resume.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
@@ -36,25 +32,24 @@
     <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">00 // init</a></li>
+        <li><a href="about.html">01 // about</a></li>
+        <li><a href="portfolio.html">02 // projects</a></li>
+        <li><a href="resume.html">03 // experience</a></li>
+        <li><a href="contact.html">04 // contact</a></li>
       </ul>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
 <main>
   <div class="container">
 
-<section aria-labelledby="resume-heading">
+<section class="section" aria-labelledby="resume-heading">
   <p class="eyebrow">Resume</p>
   <h1 id="resume-heading">Experience and projects.</h1>
   <div class="resume-actions">
-    <a class="btn primary" href="assets/files/NguyenQuocHuy-CV.pdf" download aria-label="Download CV as PDF">
+    <a class="btn primary" href="assets/files/NguyenQuocHuy-CV.pdf" download="CV Nguyễn Quốc Huy - Fullstack Developer.pdf" aria-label="Download CV as PDF">
       Download CV (PDF)
     </a>
     <a class="btn" href="contact.html">Contact me</a>
@@ -67,7 +62,7 @@
       <p><strong>GitHub:</strong> <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">github.com/ngqhuy-dev</a></p>
       <p><strong>Bitbucket:</strong> <a href="https://bitbucket.org/crossplatformdev/workspace/projects/EJ" target="_blank" rel="noopener">JinStore project</a></p>
     </div>
-    <div>
+    <div class="resume-stack">
       <div class="resume-section card">
         <h3>Experience</h3>
         <ul class="timeline">
@@ -136,7 +131,7 @@
     <div class="footer-links">
       <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
-      <a href="assets/files/NguyenQuocHuy-CV.pdf" download>CV (PDF)</a>
+      <a href="assets/files/NguyenQuocHuy-CV.pdf" download="CV Nguyễn Quốc Huy - Fullstack Developer.pdf">CV (PDF)</a>
     </div>
   </div>
 </footer>

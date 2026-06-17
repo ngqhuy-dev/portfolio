@@ -1,16 +1,15 @@
 (function () {
   /* ── Hamburger menu ── */
   (function setupHamburger() {
-    const header = document.querySelector('header .nav');
-    const themeBtn = document.querySelector('.theme-toggle');
-    if (!header || !themeBtn) return;
+    const nav = document.querySelector('header .nav');
+    if (!nav) return;
 
     const ham = document.createElement('button');
     ham.className = 'hamburger';
     ham.setAttribute('aria-expanded', 'false');
     ham.setAttribute('aria-label', 'Toggle menu');
     ham.textContent = '☰';
-    themeBtn.parentNode.insertBefore(ham, themeBtn);
+    nav.appendChild(ham);
 
     const desktopList = document.querySelector('header nav ul');
     const mobileWrap = document.getElementById('mobile-menu');
@@ -57,22 +56,12 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ── Theme toggle (FOUC prevention is in <head>; this only wires the button) ── */
-  const root = document.documentElement;
-  document.querySelectorAll('.theme-toggle').forEach((btn) => {
-    btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌞' : '🌓';
-    btn.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? '🌞' : '🌓';
-    });
-  });
-
   /* ── Active nav: set aria-current dynamically ── */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
   document.querySelectorAll('header nav a, .mobile-menu a').forEach((a) => {
-    if (a.getAttribute('href') === currentPage) {
+    const href = a.getAttribute('href');
+    if (href === currentPage) {
       a.classList.add('active');
       a.setAttribute('aria-current', 'page');
     } else {

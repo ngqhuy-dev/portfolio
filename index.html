@@ -4,13 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FOUC prevention: set theme before CSS paints -->
-  <script>
-    (function(){
-      var s = localStorage.getItem('theme');
-      document.documentElement.setAttribute('data-theme', s || 'dark');
-    })();
-  </script>
 
   <title>Nguyễn Quốc Huy | Frontend Developer</title>
   <meta name="description" content="Portfolio of Nguyễn Quốc Huy, a frontend developer working with React, React Native, API integration, OTP authentication, realtime features, and product UI." />
@@ -29,6 +22,9 @@
   <meta name="twitter:description" content="Frontend developer specializing in React and React Native. Shipped features across social, operations, events, and commerce products." />
   <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Inter+Tight:wght@800;900&family=JetBrains+Mono:wght@400;700&display=swap" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/professional.css" />
@@ -61,14 +57,13 @@
     <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">00 // init</a></li>
+        <li><a href="about.html">01 // about</a></li>
+        <li><a href="portfolio.html">02 // projects</a></li>
+        <li><a href="resume.html">03 // experience</a></li>
+        <li><a href="contact.html">04 // contact</a></li>
       </ul>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
   </div>
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
@@ -77,13 +72,13 @@
 
 <section class="hero fade-in" aria-labelledby="hero-heading">
   <div>
-    <p class="eyebrow">Frontend Developer</p>
-    <h1 id="hero-heading">Building React and React Native features that ship.</h1>
-    <p>I work on product features close to real user flows — authentication, media upload, realtime sync, location tracking, chat, and payment integrations — across web and mobile.</p>
+    <p class="eyebrow">00 // INIT SEQUENCE</p>
+    <h1 id="hero-heading">Nguyễn Quốc Huy</h1>
+    <p class="hero-subtitle"><span>I build</span> <strong>React Native_</strong></p>
+    <p>Building production mobile features, automation systems, and fullstack interfaces close to real user flows: authentication, realtime sync, VoIP calls, chat, and payment integrations.</p>
     <div class="hero-actions">
-      <a class="btn primary" href="portfolio.html">View Projects</a>
-      <a class="btn" href="resume.html">Experience</a>
-      <a class="btn" href="contact.html">Contact</a>
+      <a class="btn primary" href="assets/files/NguyenQuocHuy-CV.pdf" download="CV Nguyễn Quốc Huy - Fullstack Developer.pdf">Download Manifest</a>
+      <a class="btn" href="contact.html">Initiate Contact</a>
     </div>
     <div class="stat-grid">
       <div class="stat"><strong>E2E</strong><span>Automation framework for Zalo OA FlowBot — real iOS & Android device testing</span></div>
@@ -120,7 +115,6 @@
       <p class="eyebrow">Selected work</p>
       <h2 id="projects-heading">Selected product work.</h2>
     </div>
-    <p>Short case studies from product work and personal systems. Private repositories are marked clearly.</p>
   </div>
   <div class="grid cols-3" id="featured-projects" aria-live="polite" aria-label="Featured projects"></div>
   <div class="section-cta"><a class="btn" href="portfolio.html">See all projects</a></div>
@@ -184,7 +178,7 @@
     <div class="footer-links">
       <a href="https://github.com/ngqhuy-dev" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:nguyenquochuy812003@gmail.com">Email</a>
-      <a href="resume.html">Resume</a>
+      <a href="resume.html">03 // experience</a>
     </div>
   </div>
 </footer>
