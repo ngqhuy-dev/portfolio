@@ -24,12 +24,12 @@
     "live": "#",
     "content": [
       "Role: Frontend Developer at AntBuddy JSC (01/2026 – present).",
-      "Call system: integrated CRM call history, showed customer name in call history, fixed call type handling and auto-save race conditions, fixed FCM token cleanup on signout to prevent calls being received after logout.",
-      "TikTok channel: added TikTok messaging support and UI, implemented filter for TikTok conversations, rendered lead questions and answers in message container.",
-      "Omni-channel inbox: updated action menu to conditionally show reply/forward based on message channel, added copy text functionality.",
-      "Push notifications: fixed device token registration/unregistration lifecycle on iOS and Android — ensuring correct behavior on login, signout, and SwitchCompany.",
-      "Tickets: added navigation to Tickets screen with initial filter for assigned tickets.",
-      "Cross-platform maintenance across saas-android and saas-ios branches. Repository is private — production product at AntBuddy JSC."
+      "Call system: integrated CRM call history with customer identity display, resolved call type handling and push notification token lifecycle issues to ensure correct behavior across login, logout, and account switching.",
+      "TikTok channel: added TikTok messaging support including conversation filtering and lead Q&A rendering within the message container.",
+      "Omni-channel inbox: extended action menu with channel-aware reply/forward logic and copy text support.",
+      "Push notifications: stabilized device token registration lifecycle on iOS and Android across all authentication states.",
+      "Tickets: implemented navigation to the Tickets screen with pre-applied assignment filter.",
+      "Cross-platform maintenance on both iOS and Android builds. Repository is private — production product at AntBuddy JSC."
     ]
   },
   {
@@ -56,12 +56,12 @@
     "live": "#",
     "content": [
       "Role: Frontend Developer at AntBuddy JSC — built and maintained the automation test framework.",
-      "Architecture: Playwright as test runner orchestrating Appium (XCUITest on iOS, UiAutomator2 on Android) via WebDriverIO for real-device control.",
-      "Covered 83 UAT test specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
-      "CRM API verification layer: each test validates backend state via CRM/Omni API in addition to UI assertions (dual-layer verification).",
-      "OCR integration using Tesseract.js to read text content directly from device screenshots when Appium selectors are not reliable.",
-      "Report pipeline: HTML report, JSON result, Excel export, auto-generated dashboard, and ZIP artifact — all from a single npm run report:full command.",
-      "Custom utility modules: bot-assertions.js (keyword normalization + Vietnamese diacritic-insensitive matching), zalo-actions.js, crm-api-helper.js, android-bottom-sheet.js.",
+      "Architecture: Playwright as test runner orchestrating Appium via WebDriverIO for real-device control on iOS and Android.",
+      "Covered UAT test specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
+      "Dual-layer verification: each test combines UI assertions with backend API validation to ensure full correctness.",
+      "OCR integration using Tesseract.js to extract text from device screenshots when standard selectors are not reliable.",
+      "Report pipeline: automated HTML, JSON, Excel, and dashboard reports generated from a single command.",
+      "Built modular utility layers for keyword normalization (Vietnamese diacritic-insensitive), Zalo interactions, API helpers, and platform-specific UI handling.",
       "Repository is private — internal tooling at AntBuddy JSC."
     ]
   },
