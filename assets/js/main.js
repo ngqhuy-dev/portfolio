@@ -113,16 +113,16 @@
       decoding: 'async',
       width: '800',
     });
-    const imgLink = el('a', { href: 'project.html?id=' + p.id, className: 'project-card-img-wrap' }, [img]);
+    const imgLink = el('div', { className: 'project-card-img-wrap' }, [img]);
 
     const meta = el('div', { className: 'meta', textContent: p.category.toUpperCase() + ' • ' + p.date });
-    const titleLink = el('a', { href: 'project.html?id=' + p.id, textContent: p.title });
-    const h3 = el('h3', null, [titleLink]);
+    const h3 = el('h3', { textContent: p.title });
     const summary = el('p', { className: 'project-summary', textContent: p.summary });
     const badges = badgeList(p.technologies);
 
     const body = el('div', { className: 'project-card-body' }, [meta, h3, summary, badges]);
     const article = el('article', { className: 'card project-card' }, [imgLink, body]);
+    article.style.cursor = 'default';
     return article;
   }
 
