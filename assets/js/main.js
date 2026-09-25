@@ -61,11 +61,16 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ── Active nav: set aria-current dynamically ── */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // Treat "/about", "/about/" and "/about.html" as the same route
+  function routeOf(pathname) {
+    const route = pathname.replace(/\/+$/, '').replace(/\.html$/, '').replace(/\/index$/, '');
+    return route || '/';
+  }
+
+  const currentRoute = routeOf(window.location.pathname);
 
   document.querySelectorAll('header nav a, .mobile-menu a').forEach((a) => {
-    const href = a.getAttribute('href');
-    if (href === currentPage) {
+    if (routeOf(a.pathname) === currentRoute) {
       a.classList.add('active');
       a.setAttribute('aria-current', 'page');
     } else {
@@ -108,7 +113,7 @@
     container.innerHTML = '';
     const message = el('p', { className: 'load-error', role: 'alert' });
     message.appendChild(txt('Projects could not be loaded. Please refresh, or see the '));
-    message.appendChild(el('a', { href: 'resume.html', textContent: 'resume' }));
+    message.appendChild(el('a', { href: '/resume', textContent: 'resume' }));
     message.appendChild(txt(' for the full list.'));
     container.appendChild(message);
   }
@@ -166,7 +171,7 @@
   /* ── Home: featured projects ── */
   const featuredEl = document.getElementById('featured-projects');
   if (featuredEl) {
-    loadJSON('assets/data/projects.json')
+    loadJSON('/assets/data/projects.json')
       .then((data) => {
         data.slice(0, 3).forEach((p) => featuredEl.appendChild(createProjectCard(p)));
       })
@@ -183,7 +188,7 @@
       items.forEach((p) => projectListEl.appendChild(createProjectCard(p)));
     }
 
-    loadJSON('assets/data/projects.json')
+    loadJSON('/assets/data/projects.json')
       .then((data) => {
         allProjects = data;
         renderProjects(allProjects);

@@ -21,9 +21,10 @@ vercel.json, _headers    security + cache headers
 ```
 
 ## Run locally
-`fetch()` needs HTTP, so serve the folder instead of opening files directly:
+URLs are extension-less (`/about` serves `about.html`), so use a server that
+supports clean URLs — `serve` matches Vercel's behavior:
 ```bash
-python3 -m http.server 8080
+npx -p serve@14 serve -l 8080 .
 ```
 
 ## Editing content

@@ -13,6 +13,13 @@ Static site with no build step. The repository root is the publish directory.
 - Publish Directory: `.`
 - `_headers` mirrors the rules in `vercel.json`. Keep the two files in sync.
 
+## Clean URLs
+Pages are linked as `/about`, `/portfolio`, … without `.html`.
+- Vercel: `"cleanUrls": true` in `vercel.json`; `/about.html` redirects to `/about`.
+- Netlify: Pretty URLs are on by default. Cloudflare Pages does this automatically.
+- New pages: link them as `/<name>` and add the clean URL to `sitemap.xml`.
+- Asset paths are root-absolute (`/assets/...`) so they resolve on any route.
+
 ## Caching
 File names are not content-hashed, so CSS, JS and JSON data use
 `max-age=0, must-revalidate` (served from cache, revalidated with ETag).
@@ -30,7 +37,7 @@ Adding a new third-party origin (analytics, images, fonts) requires updating
 the CSP in both `vercel.json` and `_headers`.
 
 ## Post-deploy checks
-- Every page and the CV download return 200; an unknown path returns `404.html`.
+- `/about` returns 200, `/about.html` redirects to `/about`, an unknown path returns `404.html`.
 - `curl -I https://nqhuy.dev/` shows the security headers.
 - Share preview renders `assets/img/og-cover.png` (e.g. opengraph.xyz).
 - Update `<lastmod>` in `sitemap.xml` when page content changes.
