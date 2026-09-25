@@ -1,1 +1,0 @@
-.services{align-items:stretch;}.services .card{display:flex;flex-direction:column;gap:8px;}.pricing{display:grid;gap:16px;}@media (min-width:720px){.pricing{grid-template-columns:repeat(3,1fr);}}@media (max-width:720px){.services{grid-template-columns:1fr;}.pricing{grid-template-columns:1fr;}}
