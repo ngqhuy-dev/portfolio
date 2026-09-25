@@ -2,23 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Page Not Found</title>
-  <style>
-    html,body{height:100%;margin:0}
-    body{display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b1220;color:#e6edf3}
-    .box{max-width:640px;padding:32px;text-align:center}
-    h1{font-size:48px;margin:0 0 8px}
-    p{opacity:.9;margin:0 0 16px}
-    a{color:#8ab4ff;text-decoration:none;border-bottom:1px dashed #8ab4ff}
-    a:hover{opacity:.9}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="noindex" />
+  <title>404 — Page not found | Nguyễn Quốc Huy</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Inter+Tight:wght@900&family=JetBrains+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/professional.css" />
 </head>
 <body>
-  <div class="box">
-    <h1>404</h1>
-    <p>We couldn’t find that page.</p>
-    <p><a href="/index.html">Back to home</a></p>
+<main id="main">
+  <div class="container">
+    <section class="hero not-found" aria-labelledby="not-found-heading">
+      <div>
+        <p class="eyebrow">ERR 404 // ROUTE NOT FOUND</p>
+        <h1 id="not-found-heading">Page not found.</h1>
+        <p>The page you're looking for doesn't exist or has moved.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="/">Back to home</a>
+          <a class="btn" href="/portfolio.html">View projects</a>
+        </div>
+      </div>
+    </section>
   </div>
+</main>
 </body>
 </html>

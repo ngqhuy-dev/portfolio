@@ -14,7 +14,7 @@
       "CodePush"
     ],
     "summary": "Production CRM mobile app (iOS + Android) for omni-channel customer support. Worked on call system, TikTok channel, push notification lifecycle, and Omni inbox.",
-    "image": "https://placehold.co/800x500/0f4c81/ffffff?text=AntBuddy+Mobile",
+    "accent": "#0f4c81",
     "images": [
       "https://placehold.co/800x500/0f4c81/ffffff?text=Call+System+%2B+VoIP",
       "https://placehold.co/800x500/0d3d6e/ffffff?text=Omni+Inbox+%2B+TikTok",
@@ -46,7 +46,7 @@
       "Android / iOS"
     ],
     "summary": "End-to-end automation test framework for AntBuddy's Zalo OA FlowBot. 83 UAT specs covering onboarding, bot flows, and CRM API verification on real iOS/Android devices.",
-    "image": "https://placehold.co/800x500/065f46/ffffff?text=AntBuddy+Autotest",
+    "accent": "#065f46",
     "images": [
       "https://placehold.co/800x500/065f46/ffffff?text=Playwright+%2B+Appium",
       "https://placehold.co/800x500/064e3b/ffffff?text=83+UAT+Test+Cases",
@@ -78,7 +78,7 @@
       "Realtime"
     ],
     "summary": "Social product for community connection. Worked on crash stabilization, media upload, realtime engagement, and Zalo OTP authentication.",
-    "image": "https://placehold.co/800x500/0f766e/ffffff?text=Linora+Social+Network",
+    "accent": "#0f766e",
     "images": [
       "https://placehold.co/800x500/0f766e/ffffff?text=Media+Upload+Flow",
       "https://placehold.co/800x500/115e59/ffffff?text=Realtime+Like+%2F+Comment",
@@ -106,7 +106,7 @@
       "Web Admin"
     ],
     "summary": "Field operations platform for gas technicians. Mobile app with OTP identity, realtime KTV location tracking, and FCM push notifications for order status.",
-    "image": "https://placehold.co/800x500/1d4ed8/ffffff?text=Gas+Th%C3%A1nh+Gi%C3%B2ng",
+    "accent": "#1d4ed8",
     "images": [
       "https://placehold.co/800x500/1d4ed8/ffffff?text=Technician+Mobile+Flow",
       "https://placehold.co/800x500/1e40af/ffffff?text=Realtime+Location+Tracking",
@@ -135,7 +135,7 @@
       "Digital Invitation"
     ],
     "summary": "Fullstack event platform supporting large-scale events. QR check-in, scoring, submission management, and auto-generated digital invitations.",
-    "image": "https://placehold.co/800x500/7c3aed/ffffff?text=Event+Flow",
+    "accent": "#7c3aed",
     "images": [
       "https://placehold.co/800x500/7c3aed/ffffff?text=QR+Check-in",
       "https://placehold.co/800x500/6d28d9/ffffff?text=Submission+Management",
@@ -165,7 +165,7 @@
       "State Management"
     ],
     "summary": "In-app internal chat built on Rocket.Chat API. Centralized Redux Toolkit state for real-time message sync across high-volume conversations.",
-    "image": "https://placehold.co/800x500/be123c/ffffff?text=Kyn+Group+Chat",
+    "accent": "#be123c",
     "images": [
       "https://placehold.co/800x500/be123c/ffffff?text=Rocket.Chat+Integration",
       "https://placehold.co/800x500/9f1239/ffffff?text=Conversation+State",
@@ -197,7 +197,7 @@
       "Cloudinary"
     ],
     "summary": "Personal fullstack commerce system with web and mobile apps. Google login, OTP, VNPay payment, Cloudinary storage, and WebSocket realtime updates.",
-    "image": "https://placehold.co/800x500/ca8a04/111827?text=JinStore",
+    "accent": "#ca8a04",
     "images": [
       "https://placehold.co/800x500/ca8a04/111827?text=Web+Storefront",
       "https://placehold.co/800x500/a16207/ffffff?text=Mobile+App",

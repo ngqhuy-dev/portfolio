@@ -1,1 +1,2 @@
 .profile{display:grid;gap:20px;}@media (min-width:900px){.profile{grid-template-columns:1fr 1.2fr;}}.timeline li{margin:0 0 12px;}@media (max-width:720px){.profile{grid-template-columns:1fr;}.timeline li{margin-bottom:10px;}}
+.about-cards { margin-top: 18px; }

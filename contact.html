@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <title>Contact | Nguyễn Quốc Huy</title>
   <meta name="description" content="Contact Nguyễn Quốc Huy — frontend developer available for React, React Native, and fullstack work." />
@@ -13,11 +19,17 @@
   <meta property="og:title" content="Contact | Nguyễn Quốc Huy" />
   <meta property="og:description" content="Frontend developer available for React, React Native, and fullstack work. Get in touch." />
   <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nguyễn Quốc Huy — Frontend Developer" />
+  <meta property="og:site_name" content="Nguyễn Quốc Huy" />
+  <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | Nguyễn Quốc Huy" />
   <meta name="twitter:description" content="Frontend developer available for React, React Native, and fullstack work." />
   <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+  <meta name="twitter:image:alt" content="Nguyễn Quốc Huy — Frontend Developer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +39,7 @@
   <link rel="stylesheet" href="assets/css/professional.css" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header>
   <div class="container nav">
     <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
@@ -42,7 +55,7 @@
   </div>
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
-<main>
+<main id="main" tabindex="-1">
   <div class="container">
 
 <section class="section" aria-labelledby="contact-heading">
@@ -95,8 +108,13 @@
       class="card"
       action="#"
       method="POST"
+      data-mailto="nguyenquochuy812003@gmail.com"
       novalidate
     >
+      <div class="visually-hidden" aria-hidden="true">
+        <label for="gotcha">Leave this field empty</label>
+        <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+      </div>
       <div class="grid cols-2">
         <div>
           <label for="name">Name</label>
@@ -106,6 +124,7 @@
             type="text"
             placeholder="Your name"
             autocomplete="name"
+            maxlength="100"
             required
           />
         </div>
@@ -117,6 +136,7 @@
             type="email"
             placeholder="you@example.com"
             autocomplete="email"
+            maxlength="254"
             required
           />
         </div>
@@ -127,6 +147,7 @@
           id="message"
           name="message"
           placeholder="Role, project context, or just say hi."
+          maxlength="5000"
           required
         ></textarea>
       </div>
@@ -135,9 +156,11 @@
         Thanks! I'll get back to you soon. You can also reach me directly at
         <a href="mailto:nguyenquochuy812003@gmail.com">nguyenquochuy812003@gmail.com</a>.
       </div>
-      <div class="error" id="error" role="alert" aria-live="assertive">
-        Please fill in all fields.
+      <div class="success" id="handoff" role="status" aria-live="polite">
+        Your email app should open with the message ready to send. If it doesn't, email me at
+        <a href="mailto:nguyenquochuy812003@gmail.com">nguyenquochuy812003@gmail.com</a>.
       </div>
+      <div class="error" id="error" role="alert" aria-live="assertive"></div>
     </form>
   </div>
 </section>

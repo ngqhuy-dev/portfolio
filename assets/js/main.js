@@ -5,7 +5,9 @@
     if (!nav) return;
 
     const ham = document.createElement('button');
+    ham.type = 'button';
     ham.className = 'hamburger';
+    ham.setAttribute('aria-controls', 'mobile-menu');
     ham.setAttribute('aria-expanded', 'false');
     ham.setAttribute('aria-label', 'Toggle menu');
     ham.textContent = '☰';
@@ -40,7 +42,9 @@
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMenu();
+      if (e.key !== 'Escape' || !mobileWrap.classList.contains('open')) return;
+      closeMenu();
+      ham.focus();
     });
 
     document.addEventListener('click', (e) => {
@@ -78,10 +82,6 @@
     });
   }
 
-  function getParam(name) {
-    return new URL(window.location.href).searchParams.get(name);
-  }
-
   function el(tag, attrs, children) {
     const node = document.createElement(tag);
     if (attrs) Object.entries(attrs).forEach(([k, v]) => {
@@ -104,57 +104,73 @@
     return wrap;
   }
 
+  function renderLoadError(container) {
+    container.innerHTML = '';
+    const message = el('p', { className: 'load-error', role: 'alert' });
+    message.appendChild(txt('Projects could not be loaded. Please refresh, or see the '));
+    message.appendChild(el('a', { href: 'resume.html', textContent: 'resume' }));
+    message.appendChild(txt(' for the full list.'));
+    container.appendChild(message);
+  }
+
+  function hasPublicLink(url) {
+    return Boolean(url) && url !== '#';
+  }
+
+  function projectInitials(title) {
+    return title
+      .split(/[\s—-]+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((word) => word[0].toUpperCase())
+      .join('');
+  }
+
+  // Decorative cover — no remote image dependency, tinted by the project's accent color
+  function createProjectCover(p) {
+    const cover = el('div', { className: 'project-cover', 'aria-hidden': 'true' }, [
+      el('span', { className: 'project-cover-label', textContent: '~/' + p.category }),
+      el('span', { className: 'project-cover-mark', textContent: projectInitials(p.title) }),
+    ]);
+    if (p.accent) cover.style.setProperty('--project-accent', p.accent);
+    return cover;
+  }
+
+  function createProjectLink(p) {
+    if (!hasPublicLink(p.github)) {
+      return el('span', { className: 'project-private', textContent: 'Private repository' });
+    }
+    return el('a', {
+      className: 'project-link',
+      href: p.github,
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      textContent: 'Source ↗',
+      'aria-label': p.title + ' source code (opens in a new tab)',
+    });
+  }
+
   /* ── Project card (XSS-safe via DOM API) ── */
   function createProjectCard(p) {
-    const img = el('img', {
-      src: p.image,
-      alt: p.title,
-      loading: 'lazy',
-      decoding: 'async',
-      width: '800',
-    });
-    const imgLink = el('div', { className: 'project-card-img-wrap' }, [img]);
-
     const meta = el('div', { className: 'meta', textContent: p.category.toUpperCase() + ' • ' + p.date });
     const h3 = el('h3', { textContent: p.title });
     const summary = el('p', { className: 'project-summary', textContent: p.summary });
     const badges = badgeList(p.technologies);
+    badges.className = 'project-badges';
+    const footer = el('div', { className: 'project-card-footer' }, [createProjectLink(p)]);
 
-    const body = el('div', { className: 'project-card-body' }, [meta, h3, summary, badges]);
-    const article = el('article', { className: 'card project-card' }, [imgLink, body]);
-    article.style.cursor = 'default';
-    return article;
-  }
-
-  /* ── Post card (XSS-safe) ── */
-  function createPostCard(post) {
-    const img = el('img', {
-      src: post.hero,
-      alt: post.title,
-      loading: 'lazy',
-      decoding: 'async',
-    });
-    const imgLink = el('a', { href: 'post.html?id=' + post.id }, [img]);
-
-    const titleLink = el('a', { href: 'post.html?id=' + post.id, textContent: post.title });
-    const h3 = el('h3', null, [titleLink]);
-
-    const tagSpans = post.tags.map((t) => el('span', { className: 'tag', textContent: '#' + t }));
-    const meta = el('div', { className: 'meta' });
-    meta.appendChild(txt(post.date + ' • '));
-    tagSpans.forEach((s) => { meta.appendChild(s); meta.appendChild(txt(' ')); });
-
-    const excerpt = el('p', { textContent: post.excerpt });
-
-    return el('article', { className: 'card post-card' }, [imgLink, h3, meta, excerpt]);
+    const body = el('div', { className: 'project-card-body' }, [meta, h3, summary, badges, footer]);
+    return el('article', { className: 'card project-card' }, [createProjectCover(p), body]);
   }
 
   /* ── Home: featured projects ── */
   const featuredEl = document.getElementById('featured-projects');
   if (featuredEl) {
-    loadJSON('assets/data/projects.json').then((data) => {
-      data.slice(0, 3).forEach((p) => featuredEl.appendChild(createProjectCard(p)));
-    });
+    loadJSON('assets/data/projects.json')
+      .then((data) => {
+        data.slice(0, 3).forEach((p) => featuredEl.appendChild(createProjectCard(p)));
+      })
+      .catch(() => renderLoadError(featuredEl));
   }
 
   /* ── Portfolio: project list + filter ── */
@@ -167,16 +183,18 @@
       items.forEach((p) => projectListEl.appendChild(createProjectCard(p)));
     }
 
-    loadJSON('assets/data/projects.json').then((data) => {
-      allProjects = data;
-      renderProjects(allProjects);
-    });
+    loadJSON('assets/data/projects.json')
+      .then((data) => {
+        allProjects = data;
+        renderProjects(allProjects);
+      })
+      .catch(() => renderLoadError(projectListEl));
 
     document.querySelectorAll('.filter').forEach((btn) => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter').forEach((b) => {
           b.classList.remove('active');
-          b.removeAttribute('aria-pressed');
+          b.setAttribute('aria-pressed', 'false');
         });
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
@@ -190,195 +208,90 @@
     if (initialActive) initialActive.setAttribute('aria-pressed', 'true');
   }
 
-  /* ── Project detail ── */
-  const projectEl = document.getElementById('project');
-  if (projectEl) {
-    const id = parseInt(getParam('id'), 10);
-    loadJSON('assets/data/projects.json').then((data) => {
-      const proj = data.find((p) => p.id === id) || data[0];
-
-      const h1 = el('h1', { textContent: proj.title });
-      const meta = el('div', {
-        className: 'meta',
-        textContent: proj.category.toUpperCase() + ' • ' + proj.date,
-      });
-      const badges = badgeList(proj.technologies);
-      badges.style.margin = '8px 0';
-
-      const summary = el('p', { textContent: proj.summary });
-
-      const ghBtn = el('a', {
-        className: 'btn',
-        href: proj.github,
-        target: '_blank',
-        rel: 'noopener',
-        textContent: 'Source',
-      });
-      const liveBtn = el('a', {
-        className: 'btn primary',
-        href: proj.live,
-        target: '_blank',
-        rel: 'noopener',
-        textContent: 'Live',
-      });
-      const actions = el('div', { className: 'project-actions' }, [ghBtn, liveBtn]);
-
-      const heroLeft = el('div', null, [h1, meta, badges, summary, actions]);
-
-      const heroImg = el('img', {
-        src: proj.image,
-        alt: proj.title,
-        loading: 'eager',
-        decoding: 'async',
-        width: '800',
-        height: '500',
-      });
-      const heroRight = el('div', null, [heroImg]);
-
-      const hero = el('div', { className: 'project-hero' }, [heroLeft, heroRight]);
-      const hr = el('hr');
-
-      const gallery = el('div', { className: 'gallery' });
-      proj.images.forEach((src, i) => {
-        gallery.appendChild(el('img', {
-          src,
-          alt: proj.title + ' screenshot ' + (i + 1),
-          loading: 'lazy',
-          decoding: 'async',
-        }));
-      });
-
-      const body = el('section', { className: 'post-body' });
-      proj.content.forEach((p) => body.appendChild(el('p', { textContent: p })));
-
-      projectEl.append(hero, hr, gallery, body);
-    });
-  }
-
-  /* ── Blog: post list + search ── */
-  const postListEl = document.getElementById('post-list');
-  if (postListEl) {
-    let allPosts = [];
-
-    function renderPosts(items) {
-      postListEl.innerHTML = '';
-      items.forEach((post) => postListEl.appendChild(createPostCard(post)));
-    }
-
-    loadJSON('assets/data/posts.json').then((data) => {
-      allPosts = data;
-      renderPosts(allPosts);
-    });
-
-    const searchEl = document.getElementById('search');
-    if (searchEl) {
-      searchEl.addEventListener('input', () => {
-        const q = searchEl.value.toLowerCase();
-        renderPosts(
-          allPosts.filter(
-            (p) =>
-              p.title.toLowerCase().includes(q) ||
-              p.tags.some((t) => t.toLowerCase().includes(q))
-          )
-        );
-      });
-    }
-  }
-
-  /* ── Post detail ── */
-  const postEl = document.getElementById('post');
-  if (postEl) {
-    const id = parseInt(getParam('id'), 10);
-    loadJSON('assets/data/posts.json').then((data) => {
-      const post = data.find((p) => p.id === id) || data[0];
-
-      const img = el('img', {
-        src: post.hero,
-        alt: post.title,
-        loading: 'eager',
-        decoding: 'async',
-      });
-      const h1 = el('h1', { textContent: post.title });
-      const tagSpans = post.tags.map((t) => el('span', { className: 'tag', textContent: '#' + t }));
-      const meta = el('div', { className: 'meta' });
-      meta.appendChild(txt(post.date + ' • ' + post.author + ' • '));
-      tagSpans.forEach((s) => { meta.appendChild(s); meta.appendChild(txt(' ')); });
-
-      const postHeader = el('header', { className: 'post-hero' }, [img, h1, meta]);
-
-      const body = el('section', { className: 'post-body' });
-      post.content.forEach((p) => body.appendChild(el('p', { textContent: p })));
-
-      postEl.append(postHeader, body);
-    });
-  }
-
-  /* ── Testimonials ── */
-  const testimonialEl = document.getElementById('testimonials');
-  if (testimonialEl) {
-    loadJSON('assets/data/testimonials.json').then((data) => {
-      data.forEach((t) => {
-        const avatar = el('img', {
-          className: 'avatar',
-          src: t.avatar,
-          alt: t.name,
-          loading: 'lazy',
-          decoding: 'async',
-          width: '48',
-          height: '48',
-        });
-        const name = el('strong', { textContent: t.name + ' • ' + t.role + ', ' + t.company });
-        const quote = el('p', { className: 'quote', textContent: '"' + t.quote + '"' });
-        const info = el('div', null, [name, quote]);
-        const card = el('div', { className: 'card testimonial' }, [avatar, info]);
-        testimonialEl.appendChild(card);
-      });
-    });
-  }
-
-  /* ── Contact form (Formspree) ── */
+  /* ── Contact form (Formspree, falls back to the visitor's mail app) ── */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    const CONTACT_EMAIL = contactForm.dataset.mailto;
+    const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const successEl = document.getElementById('success');
+    const handoffEl = document.getElementById('handoff');
+    const errorEl = document.getElementById('error');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const fields = {
+      name: contactForm.querySelector('#name'),
+      email: contactForm.querySelector('#email'),
+      message: contactForm.querySelector('#message'),
+    };
+
+    function hideStatus() {
+      [successEl, handoffEl, errorEl].forEach((node) => { node.style.display = 'none'; });
+      Object.values(fields).forEach((input) => input.removeAttribute('aria-invalid'));
+    }
+
+    function showError(message, invalidInput) {
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+      if (invalidInput) {
+        invalidInput.setAttribute('aria-invalid', 'true');
+        invalidInput.focus();
+      }
+    }
+
+    function setSending(isSending) {
+      submitBtn.disabled = isSending;
+      contactForm.setAttribute('aria-busy', String(isSending));
+    }
+
+    function openMailApp(name, email, message) {
+      const subject = 'Portfolio contact from ' + name;
+      const body = message + '\n\n— ' + name + ' <' + email + '>';
+      window.location.href = 'mailto:' + CONTACT_EMAIL
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+    }
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const successEl = document.getElementById('success');
-      const errorEl = document.getElementById('error');
+      hideStatus();
 
-      successEl.style.display = 'none';
-      errorEl.style.display = 'none';
+      const name = fields.name.value.trim();
+      const email = fields.email.value.trim();
+      const message = fields.message.value.trim();
+      const emptyField = [fields.name, fields.email, fields.message].find((input) => !input.value.trim());
 
-      const name = contactForm.querySelector('#name').value.trim();
-      const email = contactForm.querySelector('#email').value.trim();
-      const msg = contactForm.querySelector('#message').value.trim();
-
-      if (!name || !email || !msg) {
-        errorEl.style.display = 'block';
+      if (emptyField) {
+        showError('Please fill in all fields.', emptyField);
         return;
       }
+      if (!EMAIL_PATTERN.test(email)) {
+        showError('Please enter a valid email address.', fields.email);
+        return;
+      }
+
+      const honeypot = contactForm.querySelector('[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
 
       const action = contactForm.getAttribute('action');
-
-      // If no Formspree action configured, fall back to mailto guidance
       if (!action || action === '#') {
-        successEl.style.display = 'block';
-        contactForm.reset();
+        openMailApp(name, email, message);
+        handoffEl.style.display = 'block';
         return;
       }
 
+      setSending(true);
       try {
         const res = await fetch(action, {
           method: 'POST',
           body: new FormData(contactForm),
           headers: { Accept: 'application/json' },
         });
-        if (res.ok) {
-          successEl.style.display = 'block';
-          contactForm.reset();
-        } else {
-          errorEl.style.display = 'block';
-        }
+        if (!res.ok) throw new Error('Request failed with status ' + res.status);
+        successEl.style.display = 'block';
+        contactForm.reset();
       } catch {
-        errorEl.style.display = 'block';
+        showError('Message could not be sent. Please email me directly at ' + CONTACT_EMAIL + '.');
+      } finally {
+        setSending(false);
       }
     });
   }

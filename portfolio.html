@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <title>Projects | Nguyễn Quốc Huy</title>
   <meta name="description" content="Selected product projects by Nguyễn Quốc Huy: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
@@ -13,11 +19,17 @@
   <meta property="og:title" content="Projects | Nguyễn Quốc Huy" />
   <meta property="og:description" content="Selected product projects: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
   <meta property="og:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nguyễn Quốc Huy — Frontend Developer" />
+  <meta property="og:site_name" content="Nguyễn Quốc Huy" />
+  <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Projects | Nguyễn Quốc Huy" />
   <meta name="twitter:description" content="Selected product projects: social features, operations mobile app, event platform, internal chat, and cross-platform commerce." />
   <meta name="twitter:image" content="https://nqhuy.dev/assets/img/og-cover.png" />
+  <meta name="twitter:image:alt" content="Nguyễn Quốc Huy — Frontend Developer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +39,7 @@
   <link rel="stylesheet" href="assets/css/professional.css" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header>
   <div class="container nav">
     <div class="logo"><a href="index.html">Nguyễn Quốc Huy<span class="logo-accent">.dev</span></a></div>
@@ -42,13 +55,13 @@
   </div>
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation"></div>
 </header>
-<main>
+<main id="main" tabindex="-1">
   <div class="container">
 
-<section aria-labelledby="projects-heading">
+<section class="section" aria-labelledby="projects-heading">
   <p class="eyebrow">Projects</p>
   <h1 id="projects-heading">Selected projects.</h1>
-  <p>Scope, stack, and impact are summarized from CV experience. Private repositories are marked as unavailable.</p>
+  <p>Scope, stack, and impact are summarized from CV experience. Private repositories are labeled on each card.</p>
   <div class="filters" role="group" aria-label="Filter projects by category">
     <button class="btn filter active" data-filter="all" aria-pressed="true">All</button>
     <button class="btn filter" data-filter="mobile" aria-pressed="false">Mobile</button>
@@ -56,6 +69,7 @@
     <button class="btn filter" data-filter="realtime" aria-pressed="false">Realtime</button>
   </div>
   <div class="grid cols-3" id="project-list" aria-live="polite" aria-label="Project list"></div>
+  <noscript><p>Enable JavaScript to see project cards, or read the full list on the <a href="resume.html">resume</a>.</p></noscript>
 </section>
 
   </div>

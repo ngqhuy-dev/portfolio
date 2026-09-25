@@ -1,35 +1,19 @@
 (function () {
   function enhanceCards(root) {
-    root.querySelectorAll('.card:not(.fade-in)').forEach((card, index) => {
+    const cards = Array.from(root.querySelectorAll('.card:not(.fade-in)'));
+    if (root.matches && root.matches('.card:not(.fade-in)')) cards.unshift(root);
+    cards.forEach((card, index) => {
       card.classList.add('fade-in');
       card.style.animationDelay = Math.min(index * 40, 240) + 'ms';
     });
   }
 
-  function enhanceProjectLinks(root) {
-    root.querySelectorAll('a').forEach((link) => {
-      if (link.getAttribute('href') === '#') {
-        link.setAttribute('aria-disabled', 'true');
-        link.setAttribute('tabindex', '-1');
-        link.classList.add('is-disabled');
-        if (!link.textContent.includes('unavailable')) {
-          link.textContent = link.textContent.trim() + ' unavailable';
-        }
-      }
-    });
-  }
-
-  function enhance(root) {
-    enhanceCards(root);
-    enhanceProjectLinks(root);
-  }
-
-  enhance(document);
+  enhanceCards(document);
 
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       mutation.addedNodes.forEach((node) => {
-        if (node.nodeType === Node.ELEMENT_NODE) enhance(node);
+        if (node.nodeType === Node.ELEMENT_NODE) enhanceCards(node);
       });
     });
   });
