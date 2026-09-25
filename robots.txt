@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nqhuy.dev/sitemap.xml
+Sitemap: https://ngqhuy-dev.github.io/portfolio/sitemap.xml

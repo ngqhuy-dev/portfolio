@@ -1,4 +1,6 @@
-# nqhuy.dev
+# Portfolio — Nguyễn Quốc Huy
+
+Live: https://ngqhuy-dev.github.io/portfolio/
 
 Personal portfolio of Nguyễn Quốc Huy — frontend developer (React, React Native).
 Plain HTML, CSS and vanilla JavaScript; no build step.
@@ -17,7 +19,8 @@ assets/
   img/                   OG cover and app icons
 favicon.svg, favicon.ico, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml
-vercel.json, _headers    security + cache headers
+vercel.json, _headers    security + cache headers (Vercel/Netlify only)
+.nojekyll                disable Jekyll on GitHub Pages
 ```
 
 ## Run locally

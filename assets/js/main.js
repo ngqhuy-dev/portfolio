@@ -113,7 +113,7 @@
     container.innerHTML = '';
     const message = el('p', { className: 'load-error', role: 'alert' });
     message.appendChild(txt('Projects could not be loaded. Please refresh, or see the '));
-    message.appendChild(el('a', { href: '/resume', textContent: 'resume' }));
+    message.appendChild(el('a', { href: 'resume', textContent: 'resume' }));
     message.appendChild(txt(' for the full list.'));
     container.appendChild(message);
   }
@@ -171,7 +171,7 @@
   /* ── Home: featured projects ── */
   const featuredEl = document.getElementById('featured-projects');
   if (featuredEl) {
-    loadJSON('/assets/data/projects.json')
+    loadJSON('assets/data/projects.json')
       .then((data) => {
         data.slice(0, 3).forEach((p) => featuredEl.appendChild(createProjectCard(p)));
       })
@@ -188,7 +188,7 @@
       items.forEach((p) => projectListEl.appendChild(createProjectCard(p)));
     }
 
-    loadJSON('/assets/data/projects.json')
+    loadJSON('assets/data/projects.json')
       .then((data) => {
         allProjects = data;
         renderProjects(allProjects);
