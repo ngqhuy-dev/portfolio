@@ -36,7 +36,7 @@ jobs:
 
       # The Pages URL depends on the repo owner/name (<owner>.github.io/<repo>), so read it from GitHub.
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       # CANONICAL_URL (the Vercel production URL) makes this mirror defer SEO to the primary site.
       - name: Build for the GitHub Pages URL
         env:
