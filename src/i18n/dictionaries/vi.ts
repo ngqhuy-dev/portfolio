@@ -104,7 +104,7 @@ export const vi: Dictionary = {
       { title: 'Platinum Technology', description: 'Thực tập sinh Frontend, 03/2025 – 12/2025.' },
     ],
     eyebrow: 'Giới thiệu',
-    heading: 'Frontend developer có tầm fullstack.',
+    heading: 'Frontend developer.',
     paragraphs: [
       'Tôi xây dựng tính năng React và React Native gắn chặt với logic sản phẩm thật — xác thực, upload media, đồng bộ realtime, cuộc gọi VoIP, push notification, chat omni-channel và luồng thanh toán.',
       'Hiện làm việc tại AntBuddy JSC trên ứng dụng CRM mobile production (iOS + Android) và framework E2E automation test cho Zalo OA. Trước đó tại Platinum Technology (2025), phát triển cho bốn mảng sản phẩm: mạng xã hội, vận hành, sự kiện và thương mại.',
