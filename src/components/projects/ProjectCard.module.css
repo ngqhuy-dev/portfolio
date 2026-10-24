@@ -1,0 +1,94 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.cover {
+  --project-accent: var(--accent-2);
+  align-items: flex-end;
+  aspect-ratio: 16 / 8;
+  background: linear-gradient(135deg, #0b0b0e, #121217);
+  background:
+    radial-gradient(
+      120% 90% at 100% 0%,
+      color-mix(in srgb, var(--project-accent) 55%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(135deg, #0b0b0e, #121217);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+
+.coverLabel {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+.coverMark {
+  color: rgba(249, 250, 251, 0.88);
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.meta {
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.body h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.summary {
+  -webkit-box-orient: vertical;
+  color: var(--muted);
+  display: -webkit-box;
+  font-size: 13px;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  line-height: 1.55;
+  margin: 0 0 12px;
+  overflow: hidden;
+}
+
+.badges {
+  margin-bottom: 12px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  font-family: var(--font-code);
+  font-size: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.private {
+  color: var(--muted);
+}

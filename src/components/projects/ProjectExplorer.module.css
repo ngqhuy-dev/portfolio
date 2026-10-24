@@ -1,0 +1,40 @@
+.filters {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 24px;
+  padding: 8px;
+}
+
+.filters :global(.btn) {
+  border-color: transparent;
+  min-height: 36px;
+  padding: 8px 12px;
+}
+
+.filters .active {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.list {
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .filters {
+    display: flex;
+    width: 100%;
+  }
+
+  .filters :global(.btn) {
+    flex: 1 1 auto;
+  }
+
+  .list {
+    gap: 20px;
+  }
+}

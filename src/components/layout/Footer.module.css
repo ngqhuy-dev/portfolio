@@ -1,0 +1,36 @@
+.footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 32px 0;
+}
+
+.inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.links a {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .inner {
+    align-items: flex-start;
+    display: grid;
+  }
+}

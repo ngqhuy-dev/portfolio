@@ -1,0 +1,272 @@
+[
+  {
+    "id": 6,
+    "slug": "antbuddy-crm",
+    "title": "AntBuddy Mobile — CRM Omni-channel App",
+    "category": "mobile",
+    "date": "03/2026",
+    "technologies": [
+      "React Native",
+      "Firebase",
+      "Socket.io",
+      "VoIP (PJSIP)",
+      "Redux Toolkit",
+      "Realm",
+      "CodePush"
+    ],
+    "summary": {
+      "en": "Production CRM mobile app (iOS + Android) for omni-channel customer support. Worked on call system, TikTok channel, push notification lifecycle, and Omni inbox.",
+      "vi": "Ứng dụng CRM mobile production (iOS + Android) cho chăm sóc khách hàng đa kênh. Phụ trách hệ thống cuộc gọi, kênh TikTok, vòng đời push notification và hộp thư Omni."
+    },
+    "accent": "#0f4c81",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer at AntBuddy JSC (03/2026 – present).",
+        "Call system: integrated CRM call history with customer identity display, resolved call type handling and push notification token lifecycle issues to ensure correct behavior across login, logout, and account switching.",
+        "TikTok channel: added TikTok messaging support including conversation filtering and lead Q&A rendering within the message container.",
+        "Omni-channel inbox: extended action menu with channel-aware reply/forward logic and copy text support.",
+        "Push notifications: stabilized device token registration lifecycle on iOS and Android across all authentication states.",
+        "Tickets: implemented navigation to the Tickets screen with pre-applied assignment filter.",
+        "Cross-platform maintenance on both iOS and Android builds. Repository is private — production product at AntBuddy JSC."
+      ],
+      "vi": [
+        "Vai trò: Frontend Developer tại AntBuddy JSC (03/2026 – hiện tại).",
+        "Hệ thống cuộc gọi: tích hợp lịch sử cuộc gọi CRM kèm hiển thị danh tính khách hàng, xử lý loại cuộc gọi và lỗi vòng đời token push notification để hoạt động đúng khi đăng nhập, đăng xuất và chuyển tài khoản.",
+        "Kênh TikTok: hỗ trợ nhắn tin TikTok gồm lọc hội thoại và hiển thị Q&A của lead trong khung tin nhắn.",
+        "Hộp thư omni-channel: mở rộng menu thao tác với logic trả lời/chuyển tiếp theo từng kênh và hỗ trợ sao chép văn bản.",
+        "Push notification: ổn định vòng đời đăng ký device token trên iOS và Android ở mọi trạng thái xác thực.",
+        "Tickets: điều hướng tới màn hình Tickets với bộ lọc phân công được áp sẵn.",
+        "Bảo trì đa nền tảng trên cả bản build iOS và Android. Repository private — sản phẩm production của AntBuddy JSC."
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "slug": "antbuddy-autotest",
+    "title": "AntBuddy Autotest — E2E Mobile Automation",
+    "category": "fullstack",
+    "date": "06/2026",
+    "technologies": [
+      "Playwright",
+      "Appium",
+      "WebDriverIO",
+      "Tesseract.js",
+      "JavaScript",
+      "Android / iOS"
+    ],
+    "summary": {
+      "en": "End-to-end automation test framework for AntBuddy's Zalo OA FlowBot. 83 UAT specs covering onboarding, bot flows, and CRM API verification on real iOS/Android devices.",
+      "vi": "Framework kiểm thử tự động end-to-end cho Zalo OA FlowBot của AntBuddy. 83 UAT spec bao phủ onboarding, luồng bot và xác minh API CRM trên thiết bị iOS/Android thật."
+    },
+    "accent": "#065f46",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer at AntBuddy JSC — built and maintained the automation test framework.",
+        "Architecture: Playwright as test runner orchestrating Appium via WebDriverIO for real-device control on iOS and Android.",
+        "Covered UAT test specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
+        "Dual-layer verification: each test combines UI assertions with backend API validation to ensure full correctness.",
+        "OCR integration using Tesseract.js to extract text from device screenshots when standard selectors are not reliable.",
+        "Report pipeline: automated HTML, JSON, Excel, and dashboard reports generated from a single command.",
+        "Built modular utility layers for keyword normalization (Vietnamese diacritic-insensitive), Zalo interactions, API helpers, and platform-specific UI handling.",
+        "Repository is private — internal tooling at AntBuddy JSC."
+      ],
+      "vi": [
+        "Vai trò: Frontend Developer tại AntBuddy JSC — xây dựng và duy trì framework kiểm thử tự động.",
+        "Kiến trúc: Playwright làm test runner, điều phối Appium qua WebDriverIO để điều khiển thiết bị thật trên iOS và Android.",
+        "Bao phủ UAT spec cho onboarding, luồng hội thoại FlowBot, tương tác CTA và follow/unfollow Zalo OA.",
+        "Xác minh hai lớp: mỗi test kết hợp kiểm tra UI với xác thực API backend để đảm bảo đúng toàn diện.",
+        "Tích hợp OCR bằng Tesseract.js để trích xuất văn bản từ ảnh chụp màn hình khi selector thông thường không đáng tin cậy.",
+        "Pipeline báo cáo: tự động sinh báo cáo HTML, JSON, Excel và dashboard chỉ với một lệnh.",
+        "Xây dựng các lớp tiện ích module hoá cho chuẩn hoá từ khoá (không phân biệt dấu tiếng Việt), tương tác Zalo, helper API và xử lý UI theo từng nền tảng.",
+        "Repository private — công cụ nội bộ của AntBuddy JSC."
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "slug": "linora",
+    "title": "Linora Social Network",
+    "category": "realtime",
+    "date": "06/2025",
+    "technologies": ["React Native", "Redux Toolkit", "Axios", "Zalo OTP", "Realtime"],
+    "summary": {
+      "en": "Social product for community connection. Worked on crash stabilization, media upload, realtime engagement, and Zalo OTP authentication.",
+      "vi": "Sản phẩm mạng xã hội kết nối cộng đồng. Ổn định crash, upload media, tương tác realtime và xác thực Zalo OTP."
+    },
+    "accent": "#0f766e",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer Intern at Platinum Technology (06/2025 – 12/2025).",
+        "Closed 80+ QC issues in UI state, interaction logic, and crash-prone flows. Reported crash rate dropped by 40% after stabilization.",
+        "Implemented media upload, realtime like/comment sync, social connection flows, and Zalo OTP authentication for Vietnamese users.",
+        "Repository is private — part of a client product at Platinum Technology."
+      ],
+      "vi": [
+        "Vai trò: Thực tập sinh Frontend tại Platinum Technology (06/2025 – 12/2025).",
+        "Xử lý hơn 80 issue QC về UI state, logic tương tác và các luồng dễ crash. Tỉ lệ crash được ghi nhận giảm 40% sau đợt ổn định hoá.",
+        "Phát triển upload media, đồng bộ like/comment realtime, luồng kết nối xã hội và xác thực Zalo OTP cho người dùng Việt Nam.",
+        "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "gas-thanh-giong",
+    "title": "Gas Thánh Giong — Operations System",
+    "category": "mobile",
+    "date": "07/2025",
+    "technologies": [
+      "React Native",
+      "Firebase Cloud Messaging",
+      "Realtime Location",
+      "OTP",
+      "Web Admin"
+    ],
+    "summary": {
+      "en": "Field operations platform for gas technicians. Mobile app with OTP identity, realtime KTV location tracking, and FCM push notifications for order status.",
+      "vi": "Nền tảng vận hành hiện trường cho kỹ thuật viên gas. App mobile với xác thực OTP, theo dõi vị trí KTV realtime và push notification FCM cho trạng thái đơn hàng."
+    },
+    "accent": "#1d4ed8",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer Intern at Platinum Technology.",
+        "Built complete mobile business flow for technician operations including OTP-based identity verification.",
+        "Implemented realtime KTV location tracking and integrated Firebase Cloud Messaging (FCM) to push order-status updates instantly.",
+        "Updated several features on the web admin without breaking existing operational flows.",
+        "Repository is private — part of a client product at Platinum Technology."
+      ],
+      "vi": [
+        "Vai trò: Thực tập sinh Frontend tại Platinum Technology.",
+        "Xây dựng trọn vẹn luồng nghiệp vụ mobile cho kỹ thuật viên, gồm xác minh danh tính bằng OTP.",
+        "Triển khai theo dõi vị trí KTV realtime và tích hợp Firebase Cloud Messaging (FCM) để đẩy cập nhật trạng thái đơn hàng tức thì.",
+        "Cập nhật một số tính năng trên web admin mà không ảnh hưởng luồng vận hành hiện có.",
+        "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "event-flow",
+    "title": "Event Flow — Event Management Platform",
+    "category": "fullstack",
+    "date": "08/2025",
+    "technologies": ["React JS", "Node.js", "Express", "QR Check-in", "Digital Invitation"],
+    "summary": {
+      "en": "Fullstack event platform supporting large-scale events. QR check-in, scoring, submission management, and auto-generated digital invitations.",
+      "vi": "Nền tảng sự kiện fullstack cho sự kiện quy mô lớn. Check-in bằng QR, chấm điểm, quản lý bài nộp và tự động tạo thiệp mời điện tử."
+    },
+    "accent": "#7c3aed",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer Intern at Platinum Technology.",
+        "Built fullstack features using React.js (frontend) and Node.js / Express (backend).",
+        "Designed and implemented a scoring and submission management system for large-scale events.",
+        "Built QR-based check-in flow to reduce event entry friction and wait time.",
+        "Implemented automatic digital invitation generation for attendees.",
+        "Repository is private — part of a client product at Platinum Technology."
+      ],
+      "vi": [
+        "Vai trò: Thực tập sinh Frontend tại Platinum Technology.",
+        "Phát triển tính năng fullstack với React.js (frontend) và Node.js / Express (backend).",
+        "Thiết kế và triển khai hệ thống chấm điểm và quản lý bài nộp cho sự kiện quy mô lớn.",
+        "Xây dựng luồng check-in bằng QR giúp giảm thời gian chờ khi vào sự kiện.",
+        "Tự động tạo thiệp mời điện tử cho người tham dự.",
+        "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "kyn-group-chat",
+    "title": "Kyn Group — Internal Chat",
+    "category": "realtime",
+    "date": "09/2025",
+    "technologies": [
+      "React Native",
+      "Rocket.Chat API",
+      "Redux Toolkit",
+      "WebSocket",
+      "State Management"
+    ],
+    "summary": {
+      "en": "In-app internal chat built on Rocket.Chat API. Centralized Redux Toolkit state for real-time message sync across high-volume conversations.",
+      "vi": "Chat nội bộ trong app xây trên Rocket.Chat API. State Redux Toolkit tập trung để đồng bộ tin nhắn realtime với lưu lượng hội thoại lớn."
+    },
+    "accent": "#be123c",
+    "images": [],
+    "github": "#",
+    "live": "#",
+    "content": {
+      "en": [
+        "Role: Frontend Developer Intern at Platinum Technology, working with Tech Lead.",
+        "Integrated Rocket.Chat API to deliver internal chat functionality within the mobile app.",
+        "Designed centralized Redux Toolkit state to manage conversation data and keep messages in sync under high message volume.",
+        "Handled complex async data flows with Tech Lead to ensure smooth performance.",
+        "Repository is private — part of a client product at Platinum Technology."
+      ],
+      "vi": [
+        "Vai trò: Thực tập sinh Frontend tại Platinum Technology, làm việc cùng Tech Lead.",
+        "Tích hợp Rocket.Chat API để cung cấp tính năng chat nội bộ trong ứng dụng mobile.",
+        "Thiết kế state Redux Toolkit tập trung để quản lý dữ liệu hội thoại và giữ tin nhắn đồng bộ khi lưu lượng lớn.",
+        "Cùng Tech Lead xử lý các luồng dữ liệu async phức tạp để đảm bảo hiệu năng mượt mà.",
+        "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "slug": "jinstore",
+    "title": "JinStore — Cross-platform Sales System",
+    "category": "fullstack",
+    "date": "02/2025",
+    "technologies": [
+      "React JS",
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "WebSocket",
+      "VNPay",
+      "Cloudinary"
+    ],
+    "summary": {
+      "en": "Personal fullstack commerce system with web and mobile apps. Google login, OTP, VNPay payment, Cloudinary storage, and WebSocket realtime updates.",
+      "vi": "Hệ thống thương mại fullstack cá nhân gồm web và mobile. Đăng nhập Google, OTP, thanh toán VNPay, lưu trữ Cloudinary và cập nhật realtime qua WebSocket."
+    },
+    "accent": "#ca8a04",
+    "images": [],
+    "github": "https://bitbucket.org/crossplatformdev/workspace/projects/EJ",
+    "live": "#",
+    "content": {
+      "en": [
+        "Personal project started 02/2025, ongoing.",
+        "Built web frontend (React JS + SCSS), mobile app (React Native), and REST API backend (Node.js + Express + MongoDB) from scratch.",
+        "Integrated Google OAuth login, OTP account verification, VNPay payment gateway, and Cloudinary for image storage.",
+        "State management: Redux Toolkit on mobile, Zustand on web. Realtime order updates via WebSocket.",
+        "Bitbucket workspace: bitbucket.org/crossplatformdev/workspace/projects/EJ"
+      ],
+      "vi": [
+        "Dự án cá nhân bắt đầu từ 02/2025, đang tiếp tục phát triển.",
+        "Tự xây dựng từ đầu web frontend (React JS + SCSS), ứng dụng mobile (React Native) và REST API backend (Node.js + Express + MongoDB).",
+        "Tích hợp đăng nhập Google OAuth, xác minh tài khoản bằng OTP, cổng thanh toán VNPay và Cloudinary để lưu trữ ảnh.",
+        "Quản lý state: Redux Toolkit trên mobile, Zustand trên web. Cập nhật đơn hàng realtime qua WebSocket.",
+        "Bitbucket workspace: bitbucket.org/crossplatformdev/workspace/projects/EJ"
+      ]
+    }
+  }
+]

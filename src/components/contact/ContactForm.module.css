@@ -1,0 +1,51 @@
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.form label {
+  color: var(--muted);
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.form input,
+.form textarea {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  color: var(--text);
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.form [aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.form textarea {
+  min-height: 150px;
+}
+
+.success {
+  color: var(--accent);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.success:empty,
+.error:empty {
+  display: none;
+}

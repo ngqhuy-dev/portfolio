@@ -1,0 +1,28 @@
+.profile {
+  display: grid;
+  gap: 20px;
+}
+
+.cards {
+  margin-top: 18px;
+}
+
+.cards h3 {
+  margin-bottom: 10px;
+}
+
+.education li {
+  margin: 0 0 12px;
+}
+
+@media (min-width: 900px) {
+  .profile {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .education li {
+    margin-bottom: 10px;
+  }
+}

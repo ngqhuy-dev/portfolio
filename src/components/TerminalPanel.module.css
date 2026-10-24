@@ -1,0 +1,53 @@
+.panel {
+  background: rgba(14, 14, 16, 0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.top {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px;
+}
+
+.dot {
+  background: rgba(161, 161, 170, 0.26);
+  border-radius: 999px;
+  height: 8px;
+  width: 8px;
+}
+
+.dot:first-child {
+  background: var(--accent);
+}
+
+.body {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.signal {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px;
+}
+
+.signal strong {
+  color: var(--text);
+  display: block;
+  font-family: var(--font-code);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.signal p {
+  font-size: 14px;
+  line-height: 1.58;
+  margin: 0;
+}
