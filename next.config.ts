@@ -1,7 +1,18 @@
 import type { NextConfig } from 'next';
 
-// GitHub Pages serves the site under /portfolio; set NEXT_PUBLIC_BASE_PATH="" for a root domain.
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '/portfolio';
+// Vercel serves the site from the domain root; GitHub Pages serves it under /<repo>.
+// Explicit NEXT_PUBLIC_* values (set by CI or .env.local) always win over these defaults.
+const isVercel = process.env.VERCEL === '1';
+const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : '';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (isVercel ? '' : '/portfolio');
+// Preview deployments also point canonical URLs at production.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  vercelProductionUrl ||
+  'https://ngqhuy-dev.github.io/portfolio';
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -15,6 +26,7 @@ const nextConfig: NextConfig = {
   experimental: { globalNotFound: true },
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_SITE_URL: siteUrl,
     NEXT_PUBLIC_BUILD_YEAR: String(new Date().getFullYear()),
   },
 };

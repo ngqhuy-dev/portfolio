@@ -6,7 +6,7 @@
 
 Live site: https://ngqhuy-dev.github.io/portfolio/ (GitHub Pages, served under `/portfolio/`).
 
-## GitHub Pages (default)
+## GitHub Pages
 
 `.github/workflows/ci.yml` runs on every push and pull request: lint, typecheck, format check,
 unit tests, build, Playwright (E2E + axe + SEO) and Lighthouse budgets. Reports are uploaded as the
@@ -17,12 +17,13 @@ One-time setup:
 1. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
 2. Optional repository variables (Settings → Secrets and variables → Actions → **Variables**):
 
-| Variable             | Effect                                                       |
-| -------------------- | ------------------------------------------------------------ |
-| `CONTACT_ENDPOINT`   | Form posts to this URL (e.g. `https://formspree.io/f/<id>`)  |
-| `TURNSTILE_SITE_KEY` | Adds a Cloudflare Turnstile challenge to the form            |
-| `PLAUSIBLE_DOMAIN`   | Enables Plausible pageviews, contact events and Web Vitals   |
-| `PLAUSIBLE_SRC`      | Custom Plausible script URL (self-hosted or per-site script) |
+| Variable             | Effect                                                           |
+| -------------------- | ---------------------------------------------------------------- |
+| `CANONICAL_URL`      | Vercel production URL; makes this Pages copy point SEO at Vercel |
+| `CONTACT_ENDPOINT`   | Form posts to this URL (e.g. `https://formspree.io/f/<id>`)      |
+| `TURNSTILE_SITE_KEY` | Adds a Cloudflare Turnstile challenge to the form                |
+| `PLAUSIBLE_DOMAIN`   | Enables Plausible pageviews, contact events and Web Vitals       |
+| `PLAUSIBLE_SRC`      | Custom Plausible script URL (self-hosted or per-site script)     |
 
 All values are public (they end up in the client bundle) — never put secrets here.
 
@@ -35,16 +36,25 @@ All values are public (they end up in the client bundle) — never put secrets h
 - Files in `public/`: wrap with `assetPath('/assets/...')` from `src/config/site.ts`.
 - Never hardcode the base path (`/portfolio`).
 
-## Site URL
+## Site URL and canonical
 
-The site uses the GitHub Pages domain only. CI reads the real Pages URL with
-`actions/configure-pages` (`base_path`, `base_url`), so the build always matches the repository it
-deploys from — e.g. `nqhuy-stack/Student-Portfolio` → `https://nqhuy-stack.github.io/Student-Portfolio/`.
-Canonical, hreflang, OG images, JSON-LD, sitemap and robots all follow automatically.
+The site is published twice, on GitHub-owned and Vercel-owned domains only:
+
+| Host         | URL                                 | Base path | Source of the URL                           |
+| ------------ | ----------------------------------- | --------- | ------------------------------------------- |
+| Vercel       | `https://<project>.vercel.app/`     | none      | `VERCEL_PROJECT_PRODUCTION_URL` (automatic) |
+| GitHub Pages | `https://<owner>.github.io/<repo>/` | `/<repo>` | `actions/configure-pages` in CI (automatic) |
+
+Two public copies of the same pages count as duplicate content, so **Vercel is the canonical
+site**: set the repository variable `CANONICAL_URL` to the Vercel production URL (e.g.
+`https://nqhuy-portfolio.vercel.app`). The Pages build keeps its own `/<repo>` asset paths but its
+canonical, hreflang, Open Graph, JSON-LD, sitemap and robots URLs then all point at Vercel. Without
+the variable, each copy is self-canonical.
+
+Vercel preview deployments also use the production URL as canonical.
 
 The `/portfolio` + `ngqhuy-dev.github.io` defaults in `next.config.ts` / `src/config/site.ts` only
-apply to local builds; override them with `NEXT_PUBLIC_BASE_PATH` / `NEXT_PUBLIC_SITE_URL` to
-preview another repository's URL.
+apply to local builds; override them with `NEXT_PUBLIC_BASE_PATH` / `NEXT_PUBLIC_SITE_URL`.
 
 ## Contact form
 
@@ -78,13 +88,24 @@ GitHub Pages cannot set headers, so `scripts/inject-csp.mjs` writes a
 - `style-src` allows `'unsafe-inline'` because per-project accent colors are style attributes.
 - `frame-ancestors` only works as a header and is set in `vercel.json` / `public/_headers`.
 
-## Vercel / Netlify / Cloudflare Pages
+## Vercel
 
-Build at the domain root: set `NEXT_PUBLIC_BASE_PATH=""` and `NEXT_PUBLIC_SITE_URL`.
+One-time setup: vercel.com → Add New → Project → import the GitHub repository → Deploy. No settings
+need changing; `vercel.json` pins everything:
 
-- Vercel: framework preset **Next.js**; `vercel.json` adds security and cache headers.
-- Netlify / Cloudflare Pages: build `npm run build`, publish `out`; `public/_headers` is copied
-  into `out/`. Keep it in sync with `vercel.json`.
+- `framework: null`, `buildCommand: npm run build`, `outputDirectory: out` — Vercel hosts the static
+  export as-is, and `npm run build` runs the postbuild steps (OG `.png` names, per-page CSP).
+- `cleanUrls` + `trailingSlash: true` mirror GitHub Pages: `/about` redirects to `/about/`.
+- Security headers (HSTS, `frame-ancestors`, `X-Frame-Options`, …) and immutable caching for
+  `/_next/static/*`. Unknown paths are served `404.html`.
+- The build detects Vercel (`VERCEL=1`) and uses an empty base path and
+  `https://$VERCEL_PROJECT_PRODUCTION_URL` automatically.
+
+Pushes to `master` deploy to production; pull requests get preview URLs. Optional features use the
+same variable names as `.env.example` (`NEXT_PUBLIC_CONTACT_ENDPOINT`, …) under Project → Settings →
+Environment Variables. Quality gates (E2E, Lighthouse) run in GitHub Actions, not on Vercel.
+
+`public/_headers` is the Netlify / Cloudflare Pages equivalent of the Vercel headers; keep it in sync.
 
 ## Known limitations
 

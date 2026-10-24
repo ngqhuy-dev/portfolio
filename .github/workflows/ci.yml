@@ -37,13 +37,15 @@ jobs:
       # The Pages URL depends on the repo owner/name (<owner>.github.io/<repo>), so read it from GitHub.
       - id: pages
         uses: actions/configure-pages@v5
+      # CANONICAL_URL (the Vercel production URL) makes this mirror defer SEO to the primary site.
       - name: Build for the GitHub Pages URL
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          CANONICAL_URL: ${{ vars.CANONICAL_URL }}
         run: |
           echo "NEXT_PUBLIC_BASE_PATH=$PAGES_BASE_PATH" >> "$GITHUB_ENV"
-          echo "NEXT_PUBLIC_SITE_URL=$PAGES_BASE_URL" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_SITE_URL=${CANONICAL_URL:-$PAGES_BASE_URL}" >> "$GITHUB_ENV"
 
       - run: npm ci
       - run: npm run lint

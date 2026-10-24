@@ -1,6 +1,6 @@
 # Portfolio — Nguyễn Quốc Huy
 
-Live: https://ngqhuy-dev.github.io/portfolio/ · Tiếng Việt: https://ngqhuy-dev.github.io/portfolio/vi/
+Live: Vercel (canonical) and https://ngqhuy-dev.github.io/portfolio/ · Tiếng Việt: add `/vi/`
 
 Personal portfolio of Nguyễn Quốc Huy — frontend developer (React, React Native).
 Built with Next.js (App Router, static export), React 19, TypeScript and CSS Modules, in English and
@@ -22,7 +22,7 @@ Vietnamese.
 | E2E / a11y  | Playwright + axe-core, visual regression baselines                         |
 | Performance | Lighthouse CI budgets (perf ≥ 90, a11y/best-practices/SEO ≥ 95, CLS < 0.1) |
 | Git hooks   | Husky + lint-staged + commitlint (Conventional Commits)                    |
-| CI / Deploy | GitHub Actions → GitHub Pages (or a custom domain)                         |
+| CI / Deploy | GitHub Actions (quality gates) → GitHub Pages; Vercel Git integration      |
 | Security    | Per-page CSP with script hashes, env-driven third-party origins            |
 
 ## Getting started
