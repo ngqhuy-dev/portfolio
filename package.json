@@ -1,0 +1,55 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "node scripts/finalize-og-images.mjs && node scripts/inject-csp.mjs",
+    "preview": "node scripts/preview.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run lint && npm run typecheck && npm run format:check && npm run test",
+    "test:e2e": "playwright test",
+    "test:visual": "VISUAL=1 playwright test --project=desktop",
+    "lhci": "lhci autorun",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@fontsource/inter-tight": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.64.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.8",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "husky": "9.1.7",
+    "jsdom": "30.1.3",
+    "lint-staged": "17.6.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

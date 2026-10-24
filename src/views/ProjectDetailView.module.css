@@ -1,0 +1,120 @@
+.back {
+  color: var(--muted);
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.title {
+  font-size: clamp(36px, 6vw, 64px);
+  max-width: 920px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 760px;
+}
+
+.cover {
+  aspect-ratio: 16 / 4;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  margin: 32px 0 24px;
+}
+
+.layout {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+}
+
+.cardTitle {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.aside {
+  display: grid;
+  gap: 8px;
+}
+
+.links {
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-code);
+  font-size: 12px;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.links span {
+  color: var(--muted);
+}
+
+.gallery {
+  margin-top: 32px;
+}
+
+.pager {
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 48px;
+  padding-top: 24px;
+}
+
+.pager a {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  transition: border-color 160ms ease;
+}
+
+.pager a:hover {
+  border-color: var(--accent);
+}
+
+.pager span {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+.pager strong {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.next {
+  text-align: right;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .cover {
+    aspect-ratio: 16 / 8;
+  }
+
+  .pager {
+    grid-template-columns: 1fr;
+  }
+
+  .next {
+    text-align: left;
+  }
+}
