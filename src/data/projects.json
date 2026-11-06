@@ -28,7 +28,7 @@
         "Call system: integrated CRM call history with customer identity display, resolved call type handling and push notification token lifecycle issues to ensure correct behavior across login, logout, and account switching.",
         "TikTok channel: added TikTok messaging support including conversation filtering and lead Q&A rendering within the message container.",
         "Omni-channel inbox: extended action menu with channel-aware reply/forward logic and copy text support.",
-        "Push notifications: stabilized device token registration lifecycle on iOS and Android across all authentication states.",
+        "Push notifications: stabilized FCM/Novu device token lifecycle on iOS and Android across all authentication states.",
         "Tickets: implemented navigation to the Tickets screen with pre-applied assignment filter.",
         "Cross-platform maintenance on both iOS and Android builds. Repository is private — production product at AntBuddy JSC."
       ],
@@ -37,7 +37,7 @@
         "Hệ thống cuộc gọi: tích hợp lịch sử cuộc gọi CRM kèm hiển thị danh tính khách hàng, xử lý loại cuộc gọi và lỗi vòng đời token push notification để hoạt động đúng khi đăng nhập, đăng xuất và chuyển tài khoản.",
         "Kênh TikTok: hỗ trợ nhắn tin TikTok gồm lọc hội thoại và hiển thị Q&A của lead trong khung tin nhắn.",
         "Hộp thư omni-channel: mở rộng menu thao tác với logic trả lời/chuyển tiếp theo từng kênh và hỗ trợ sao chép văn bản.",
-        "Push notification: ổn định vòng đời đăng ký device token trên iOS và Android ở mọi trạng thái xác thực.",
+        "Push notification: ổn định vòng đời token FCM/Novu trên iOS và Android ở mọi trạng thái xác thực.",
         "Tickets: điều hướng tới màn hình Tickets với bộ lọc phân công được áp sẵn.",
         "Bảo trì đa nền tảng trên cả bản build iOS và Android. Repository private — sản phẩm production của AntBuddy JSC."
       ]
@@ -69,7 +69,7 @@
       "en": [
         "Role: Frontend Developer at AntBuddy JSC — built and maintained the automation test framework.",
         "Architecture: Playwright as test runner orchestrating Appium via WebDriverIO for real-device control on iOS and Android.",
-        "Covered UAT test specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
+        "Wrote 83 UAT specs across onboarding, FlowBot conversation flows, CTA interactions, and Zalo OA follow/unfollow.",
         "Dual-layer verification: each test combines UI assertions with backend API validation to ensure full correctness.",
         "OCR integration using Tesseract.js to extract text from device screenshots when standard selectors are not reliable.",
         "Report pipeline: automated HTML, JSON, Excel, and dashboard reports generated from a single command.",
@@ -79,7 +79,7 @@
       "vi": [
         "Vai trò: Frontend Developer tại AntBuddy JSC — xây dựng và duy trì framework kiểm thử tự động.",
         "Kiến trúc: Playwright làm test runner, điều phối Appium qua WebDriverIO để điều khiển thiết bị thật trên iOS và Android.",
-        "Bao phủ UAT spec cho onboarding, luồng hội thoại FlowBot, tương tác CTA và follow/unfollow Zalo OA.",
+        "Viết 83 UAT spec bao phủ onboarding, luồng hội thoại FlowBot, tương tác CTA và follow/unfollow Zalo OA.",
         "Xác minh hai lớp: mỗi test kết hợp kiểm tra UI với xác thực API backend để đảm bảo đúng toàn diện.",
         "Tích hợp OCR bằng Tesseract.js để trích xuất văn bản từ ảnh chụp màn hình khi selector thông thường không đáng tin cậy.",
         "Pipeline báo cáo: tự động sinh báo cáo HTML, JSON, Excel và dashboard chỉ với một lệnh.",
@@ -121,7 +121,7 @@
   {
     "id": 2,
     "slug": "gas-thanh-giong",
-    "title": "Gas Thánh Giong — Operations System",
+    "title": "Gas Thánh Gióng — Operations System",
     "category": "mobile",
     "date": "07/2025",
     "technologies": [
@@ -142,16 +142,16 @@
     "content": {
       "en": [
         "Role: Frontend Developer Intern at Platinum Technology.",
-        "Built complete mobile business flow for technician operations including OTP-based identity verification.",
+        "Built mobile business flows for technicians, including OTP-based user verification.",
         "Implemented realtime KTV location tracking and integrated Firebase Cloud Messaging (FCM) to push order-status updates instantly.",
-        "Updated several features on the web admin without breaking existing operational flows.",
+        "Added and updated several features on the web admin.",
         "Repository is private — part of a client product at Platinum Technology."
       ],
       "vi": [
         "Vai trò: Thực tập sinh Frontend tại Platinum Technology.",
-        "Xây dựng trọn vẹn luồng nghiệp vụ mobile cho kỹ thuật viên, gồm xác minh danh tính bằng OTP.",
+        "Xây dựng luồng nghiệp vụ mobile cho kỹ thuật viên, gồm xác thực người dùng bằng OTP.",
         "Triển khai theo dõi vị trí KTV realtime và tích hợp Firebase Cloud Messaging (FCM) để đẩy cập nhật trạng thái đơn hàng tức thì.",
-        "Cập nhật một số tính năng trên web admin mà không ảnh hưởng luồng vận hành hiện có.",
+        "Bổ sung và chỉnh sửa một số tính năng trên trang quản trị web.",
         "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
       ]
     }
@@ -175,16 +175,16 @@
       "en": [
         "Role: Frontend Developer Intern at Platinum Technology.",
         "Built fullstack features using React.js (frontend) and Node.js / Express (backend).",
-        "Designed and implemented a scoring and submission management system for large-scale events.",
-        "Built QR-based check-in flow to reduce event entry friction and wait time.",
+        "Built the submission management system for event entries.",
+        "Built the QR code check-in flow for event attendees.",
         "Implemented automatic digital invitation generation for attendees.",
         "Repository is private — part of a client product at Platinum Technology."
       ],
       "vi": [
         "Vai trò: Thực tập sinh Frontend tại Platinum Technology.",
         "Phát triển tính năng fullstack với React.js (frontend) và Node.js / Express (backend).",
-        "Thiết kế và triển khai hệ thống chấm điểm và quản lý bài nộp cho sự kiện quy mô lớn.",
-        "Xây dựng luồng check-in bằng QR giúp giảm thời gian chờ khi vào sự kiện.",
+        "Xây dựng hệ thống quản lý bài dự thi cho sự kiện.",
+        "Xây dựng luồng check-in bằng QR code cho người tham dự sự kiện.",
         "Tự động tạo thiệp mời điện tử cho người tham dự.",
         "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
       ]
@@ -215,14 +215,14 @@
       "en": [
         "Role: Frontend Developer Intern at Platinum Technology, working with Tech Lead.",
         "Integrated Rocket.Chat API to deliver internal chat functionality within the mobile app.",
-        "Designed centralized Redux Toolkit state to manage conversation data and keep messages in sync under high message volume.",
+        "Managed and synced conversation state with Redux Toolkit to keep the app smooth under high message volume.",
         "Handled complex async data flows with Tech Lead to ensure smooth performance.",
         "Repository is private — part of a client product at Platinum Technology."
       ],
       "vi": [
         "Vai trò: Thực tập sinh Frontend tại Platinum Technology, làm việc cùng Tech Lead.",
         "Tích hợp Rocket.Chat API để cung cấp tính năng chat nội bộ trong ứng dụng mobile.",
-        "Thiết kế state Redux Toolkit tập trung để quản lý dữ liệu hội thoại và giữ tin nhắn đồng bộ khi lưu lượng lớn.",
+        "Quản lý và đồng bộ trạng thái hội thoại bằng Redux Toolkit để app chạy mượt khi lượng tin nhắn lớn.",
         "Cùng Tech Lead xử lý các luồng dữ liệu async phức tạp để đảm bảo hiệu năng mượt mà.",
         "Repository private — một phần sản phẩm khách hàng tại Platinum Technology."
       ]

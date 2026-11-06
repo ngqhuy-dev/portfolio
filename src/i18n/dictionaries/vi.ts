@@ -4,39 +4,39 @@ export const vi: Dictionary = {
   meta: {
     home: {
       description:
-        'Portfolio của Nguyễn Quốc Huy — frontend developer làm việc với React, React Native, tích hợp API, xác thực OTP, tính năng realtime và UI sản phẩm.',
+        'Portfolio của Nguyễn Quốc Huy — mobile developer làm việc với React, React Native, tích hợp API, xác thực OTP, tính năng realtime và UI sản phẩm.',
       social:
-        'Frontend developer chuyên React và React Native. Đã phát triển tính năng cho các sản phẩm mạng xã hội, vận hành, sự kiện và thương mại tại Platinum Technology.',
+        'Mobile developer chuyên React và React Native. Đang phát triển ứng dụng CRM production tại AntBuddy JSC; trước đó làm các sản phẩm mạng xã hội, vận hành, sự kiện và chat nội bộ tại Platinum Technology.',
     },
     about: {
       title: 'Giới thiệu',
       description:
-        'Giới thiệu Nguyễn Quốc Huy — frontend developer tại AntBuddy JSC, đến từ Huế. Làm việc với React Native, E2E automation và fullstack JavaScript.',
+        'Giới thiệu Nguyễn Quốc Huy — mobile developer tại AntBuddy JSC, đến từ Huế. Làm việc với React Native, E2E automation và fullstack JavaScript.',
       social:
-        'Frontend developer đến từ Huế, Việt Nam. Làm việc với React, React Native và fullstack JavaScript.',
+        'Mobile developer đến từ Huế, Việt Nam. Làm việc với React, React Native và fullstack JavaScript.',
     },
     portfolio: {
       title: 'Dự án',
       description:
-        'Các dự án tiêu biểu của Nguyễn Quốc Huy: mạng xã hội, ứng dụng vận hành, nền tảng sự kiện, chat nội bộ và hệ thống bán hàng đa nền tảng.',
+        'Các dự án tiêu biểu của Nguyễn Quốc Huy: ứng dụng CRM đa kênh, E2E mobile automation, mạng xã hội, ứng dụng vận hành, nền tảng sự kiện, chat nội bộ và hệ thống bán hàng đa nền tảng.',
       social:
-        'Dự án tiêu biểu: mạng xã hội, ứng dụng vận hành, nền tảng sự kiện, chat nội bộ và hệ thống bán hàng đa nền tảng.',
+        'Dự án tiêu biểu: ứng dụng CRM đa kênh, E2E mobile automation, mạng xã hội, ứng dụng vận hành, nền tảng sự kiện, chat nội bộ và hệ thống bán hàng đa nền tảng.',
     },
     resume: {
       title: 'Kinh nghiệm',
       description:
-        'CV của Nguyễn Quốc Huy — frontend developer tại AntBuddy JSC. CRM React Native, E2E automation (Playwright + Appium) và các dự án fullstack cá nhân.',
+        'CV của Nguyễn Quốc Huy — mobile developer tại AntBuddy JSC. CRM React Native, E2E automation (Playwright + Appium) và các dự án fullstack cá nhân.',
       social:
-        'Frontend developer tại AntBuddy JSC. CRM React Native, E2E automation (Playwright + Appium) và các dự án fullstack cá nhân.',
+        'Mobile developer tại AntBuddy JSC. CRM React Native, E2E automation (Playwright + Appium) và các dự án fullstack cá nhân.',
     },
     contact: {
       title: 'Liên hệ',
       description:
-        'Liên hệ Nguyễn Quốc Huy — frontend developer sẵn sàng cho các công việc React, React Native và fullstack.',
-      social: 'Frontend developer sẵn sàng cho các công việc React, React Native và fullstack.',
+        'Liên hệ Nguyễn Quốc Huy — mobile developer sẵn sàng cho các công việc React, React Native và fullstack.',
+      social: 'Mobile developer sẵn sàng cho các công việc React, React Native và fullstack.',
     },
-    jobTitle: 'Frontend Developer',
-    ogAlt: 'Nguyễn Quốc Huy — Frontend Developer',
+    jobTitle: 'Mobile Developer (React Native)',
+    ogAlt: 'Nguyễn Quốc Huy — Mobile Developer (React Native)',
   },
   layout: {
     skipLink: 'Bỏ qua đến nội dung',
@@ -86,7 +86,7 @@ export const vi: Dictionary = {
       {
         title: 'Fullstack & Thực tập',
         description:
-          'Platinum Technology (2025): mạng xã hội, vận hành, sự kiện, thương mại. JinStore: React + Node.js + VNPay từ con số 0.',
+          'Platinum Technology (2025): mạng xã hội, vận hành, sự kiện, chat nội bộ. JinStore: React + Node.js + VNPay từ con số 0.',
       },
     ],
     projectsEyebrow: 'Dự án tiêu biểu',
@@ -99,15 +99,15 @@ export const vi: Dictionary = {
   about: {
     panelLabel: 'Tóm tắt hồ sơ',
     signals: [
-      { title: 'Nguyễn Quốc Huy', description: 'Frontend Developer — Huế, Việt Nam.' },
+      { title: 'Nguyễn Quốc Huy', description: 'Mobile Developer (React Native) — Huế, Việt Nam.' },
       { title: 'AntBuddy JSC', description: 'Frontend Developer, 03/2026 – hiện tại.' },
       { title: 'Platinum Technology', description: 'Thực tập sinh Frontend, 03/2025 – 12/2025.' },
     ],
     eyebrow: 'Giới thiệu',
-    heading: 'Frontend developer.',
+    heading: 'Mobile developer.',
     paragraphs: [
       'Tôi xây dựng tính năng React và React Native gắn chặt với logic sản phẩm thật — xác thực, upload media, đồng bộ realtime, cuộc gọi VoIP, push notification, chat omni-channel và luồng thanh toán.',
-      'Hiện làm việc tại AntBuddy JSC trên ứng dụng CRM mobile production (iOS + Android) và framework E2E automation test cho Zalo OA. Trước đó tại Platinum Technology (2025), phát triển cho bốn mảng sản phẩm: mạng xã hội, vận hành, sự kiện và thương mại.',
+      'Hiện làm việc tại AntBuddy JSC trên ứng dụng CRM mobile production (iOS + Android) và framework E2E automation test cho Zalo OA. Trước đó tại Platinum Technology (2025), phát triển cho bốn mảng sản phẩm: mạng xã hội, vận hành, sự kiện và chat nội bộ.',
     ],
     focusTitle: 'Điều tôi chú trọng',
     focus: [
@@ -123,7 +123,7 @@ export const vi: Dictionary = {
     degree: 'Kỹ thuật phần mềm',
     school: 'Trường Đại học Khoa học Huế',
     years: '2021–2025',
-    detail: 'Bằng cử nhân, xếp loại Khá. GPA: 2.79 / 4.0.',
+    detail: 'Bằng cử nhân, xếp loại Khá.',
   },
   portfolio: {
     eyebrow: 'Dự án',
@@ -169,7 +169,6 @@ export const vi: Dictionary = {
     channels: {
       email: 'Email',
       github: 'GitHub',
-      facebook: 'Facebook',
       bitbucket: 'Bitbucket',
       bitbucketValue: 'Workspace JinStore',
       location: 'Địa điểm',

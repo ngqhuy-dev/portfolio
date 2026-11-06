@@ -1,8 +1,8 @@
 # Portfolio — Nguyễn Quốc Huy
 
-Live: Vercel (canonical) and https://ngqhuy-dev.github.io/portfolio/ · Tiếng Việt: add `/vi/`
+Live: https://nguyenquochuy.vercel.app/ (canonical) and https://ngqhuy-dev.github.io/portfolio/ · Tiếng Việt: add `/vi/`
 
-Personal portfolio of Nguyễn Quốc Huy — frontend developer (React, React Native).
+Personal portfolio of Nguyễn Quốc Huy — mobile developer (React Native).
 Built with Next.js (App Router, static export), React 19, TypeScript and CSS Modules, in English and
 Vietnamese.
 

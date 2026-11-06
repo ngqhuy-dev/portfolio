@@ -19,11 +19,10 @@ export const siteConfig = {
   ogImage: { width: 1200, height: 630 },
   cv: {
     path: '/assets/files/NguyenQuocHuy-CV.pdf',
-    downloadName: 'CV Nguyễn Quốc Huy - Fullstack Developer.pdf',
+    downloadName: 'CV Nguyễn Quốc Huy - Mobile Developer.pdf',
   },
   links: {
     github: 'https://github.com/ngqhuy-dev',
-    facebook: 'https://www.facebook.com/nqhuy.it',
     bitbucket: 'https://bitbucket.org/crossplatformdev/workspace/projects/EJ',
   },
 } as const;

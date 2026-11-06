@@ -4,7 +4,7 @@
 `next build` → `scripts/finalize-og-images.mjs` (adds `.png` to generated OG images) →
 `scripts/inject-csp.mjs` (per-page CSP).
 
-Live site: https://ngqhuy-dev.github.io/portfolio/ (GitHub Pages, served under `/portfolio/`).
+Live site: https://nguyenquochuy.vercel.app/ (canonical) and https://ngqhuy-dev.github.io/portfolio/ (GitHub Pages, served under `/portfolio/`).
 
 ## GitHub Pages
 
@@ -47,7 +47,7 @@ The site is published twice, on GitHub-owned and Vercel-owned domains only:
 
 Two public copies of the same pages count as duplicate content, so **Vercel is the canonical
 site**: set the repository variable `CANONICAL_URL` to the Vercel production URL (e.g.
-`https://nqhuy-portfolio.vercel.app`). The Pages build keeps its own `/<repo>` asset paths but its
+`https://nguyenquochuy.vercel.app`). The Pages build keeps its own `/<repo>` asset paths but its
 canonical, hreflang, Open Graph, JSON-LD, sitemap and robots URLs then all point at Vercel. Without
 the variable, each copy is self-canonical.
 

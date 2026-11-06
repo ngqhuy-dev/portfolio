@@ -20,22 +20,22 @@ export const experiences: Experience[] = [
     organization: { en: 'AntBuddy JSC', vi: 'AntBuddy JSC' },
     role: { en: 'Frontend Developer', vi: 'Frontend Developer' },
     summary: {
-      en: 'Working on a production CRM omni-channel mobile app (iOS + Android) used by customer support teams across Vietnam.',
-      vi: 'Phát triển ứng dụng CRM omni-channel mobile production (iOS + Android) được các đội chăm sóc khách hàng trên khắp Việt Nam sử dụng.',
+      en: 'Working on a production CRM omni-channel mobile app (iOS + Android) used by customer support teams.',
+      vi: 'Phát triển ứng dụng CRM omni-channel mobile production (iOS + Android) dành cho các đội chăm sóc khách hàng.',
     },
     highlights: [
       {
         lead: 'CRM Mobile App',
         text: {
-          en: '— call system (VoIP/PJSIP, CRM call history, customer name display); resolved push notification token lifecycle across login, logout, and account switching; TikTok channel integration (messaging, filters, lead Q&A rendering); omni-channel inbox action menu (channel-aware reply/forward, copy text); Tickets screen navigation.',
-          vi: '— hệ thống cuộc gọi (VoIP/PJSIP, lịch sử cuộc gọi CRM, hiển thị tên khách hàng); xử lý vòng đời token push notification khi đăng nhập, đăng xuất và chuyển tài khoản; tích hợp kênh TikTok (nhắn tin, bộ lọc, hiển thị Q&A của lead); menu thao tác hộp thư omni-channel (trả lời/chuyển tiếp theo kênh, sao chép văn bản); điều hướng màn hình Tickets.',
+          en: '— call system (VoIP/PJSIP, CRM call history, customer name display); resolved FCM/Novu push token lifecycle across login, logout, and account switching; TikTok channel integration (messaging, filters, lead Q&A rendering); omni-channel inbox action menu (channel-aware reply/forward, copy text); Tickets screen navigation.',
+          vi: '— hệ thống cuộc gọi (VoIP/PJSIP, lịch sử cuộc gọi CRM, hiển thị tên khách hàng); xử lý vòng đời token FCM/Novu khi đăng nhập, đăng xuất và chuyển tài khoản; tích hợp kênh TikTok (nhắn tin, bộ lọc, hiển thị Q&A của lead); menu thao tác hộp thư omni-channel (trả lời/chuyển tiếp theo kênh, sao chép văn bản); điều hướng màn hình Tickets.',
         },
       },
       {
         lead: 'Automation Test Framework',
         text: {
-          en: '(Playwright + Appium + WebDriverIO) — built UAT specs for Zalo OA FlowBot on real iOS/Android devices; dual-layer verification (UI + backend API); OCR via Tesseract.js for screenshot text extraction; custom utility modules for keyword matching, Vietnamese text normalization, and platform-specific UI handling; report pipeline (HTML, Excel, dashboard, ZIP).',
-          vi: '(Playwright + Appium + WebDriverIO) — viết UAT spec cho Zalo OA FlowBot trên thiết bị iOS/Android thật; xác minh hai lớp (UI + API backend); OCR bằng Tesseract.js để trích văn bản từ ảnh chụp màn hình; module tiện ích cho so khớp từ khoá, chuẩn hoá tiếng Việt và xử lý UI theo nền tảng; pipeline báo cáo (HTML, Excel, dashboard, ZIP).',
+          en: '(Playwright + Appium + WebDriverIO) — built 83 UAT specs for Zalo OA FlowBot on real iOS/Android devices, covering onboarding, bot flows, and CRM API; dual-layer verification (UI + backend API); OCR via Tesseract.js for screenshot text extraction; custom utility modules for keyword matching, Vietnamese text normalization, and platform-specific UI handling; report pipeline (HTML, Excel, dashboard, ZIP).',
+          vi: '(Playwright + Appium + WebDriverIO) — viết 83 UAT spec cho Zalo OA FlowBot trên thiết bị iOS/Android thật, bao phủ onboarding, bot flow và API CRM; xác minh hai lớp (UI + API backend); OCR bằng Tesseract.js để trích văn bản từ ảnh chụp màn hình; module tiện ích cho so khớp từ khoá, chuẩn hoá tiếng Việt và xử lý UI theo nền tảng; pipeline báo cáo (HTML, Excel, dashboard, ZIP).',
         },
       },
     ],
@@ -57,7 +57,7 @@ export const experiences: Experience[] = [
         },
       },
       {
-        lead: 'Gas Thánh Giong',
+        lead: 'Gas Thánh Gióng',
         text: {
           en: '(operations) — built mobile technician workflows and OTP identity verification; deployed realtime KTV location tracking and Firebase Cloud Messaging for order-status push notifications.',
           vi: '(vận hành) — xây dựng luồng nghiệp vụ mobile cho kỹ thuật viên và xác minh danh tính bằng OTP; triển khai theo dõi vị trí KTV realtime và Firebase Cloud Messaging cho thông báo trạng thái đơn hàng.',

@@ -57,12 +57,6 @@ export function ContactView({ locale }: { locale: Locale }) {
       href: siteConfig.links.github,
     },
     {
-      label: t.channels.facebook,
-      value: 'facebook.com/nqhuy.it',
-      icon: 'fb',
-      href: siteConfig.links.facebook,
-    },
-    {
       label: t.channels.bitbucket,
       value: t.channels.bitbucketValue,
       icon: 'bb',

@@ -28,7 +28,7 @@ test.describe('every page', () => {
 test('should keep legacy extension-less URLs working via redirect', async ({ page }) => {
   await page.goto('about');
   await expect(page).toHaveURL(/\/about\/$/);
-  await expect(page.locator('h1')).toHaveText('Frontend developer.');
+  await expect(page.locator('h1')).toHaveText('Mobile developer.');
 });
 
 test('should render the bilingual 404 page for unknown routes', async ({ page }) => {

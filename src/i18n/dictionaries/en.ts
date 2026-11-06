@@ -2,40 +2,40 @@ export const en = {
   meta: {
     home: {
       description:
-        'Portfolio of Nguyễn Quốc Huy, a frontend developer working with React, React Native, API integration, OTP authentication, realtime features, and product UI.',
+        'Portfolio of Nguyễn Quốc Huy, a mobile developer working with React, React Native, API integration, OTP authentication, realtime features, and product UI.',
       social:
-        'Frontend developer specializing in React and React Native. Shipped features across social, operations, events, and commerce products at Platinum Technology.',
+        'Mobile developer specializing in React and React Native. Building a production CRM app at AntBuddy JSC; previously shipped social, operations, events, and internal chat products at Platinum Technology.',
     },
     about: {
       title: 'About',
       description:
-        'About Nguyễn Quốc Huy — frontend developer at AntBuddy JSC, from Huế. Working with React Native, E2E automation, and fullstack JavaScript.',
+        'About Nguyễn Quốc Huy — mobile developer at AntBuddy JSC, from Huế. Working with React Native, E2E automation, and fullstack JavaScript.',
       social:
-        'Frontend developer from Huế, Vietnam. Working with React, React Native, and fullstack JavaScript.',
+        'Mobile developer from Huế, Vietnam. Working with React, React Native, and fullstack JavaScript.',
     },
     portfolio: {
       title: 'Projects',
       description:
-        'Selected product projects by Nguyễn Quốc Huy: social features, operations mobile app, event platform, internal chat, and cross-platform commerce.',
+        'Selected product projects by Nguyễn Quốc Huy: omni-channel CRM app, E2E mobile automation, social network, operations app, event platform, internal chat, and cross-platform commerce.',
       social:
-        'Selected product projects: social features, operations mobile app, event platform, internal chat, and cross-platform commerce.',
+        'Selected product projects: omni-channel CRM app, E2E mobile automation, social network, operations app, event platform, internal chat, and cross-platform commerce.',
     },
     resume: {
       title: 'Resume',
       description:
-        'Resume of Nguyễn Quốc Huy — frontend developer at AntBuddy JSC. React Native CRM, E2E automation (Playwright + Appium), and fullstack personal projects.',
+        'Resume of Nguyễn Quốc Huy — mobile developer at AntBuddy JSC. React Native CRM, E2E automation (Playwright + Appium), and fullstack personal projects.',
       social:
-        'Frontend developer at AntBuddy JSC. React Native CRM, E2E automation (Playwright + Appium), and fullstack personal projects.',
+        'Mobile developer at AntBuddy JSC. React Native CRM, E2E automation (Playwright + Appium), and fullstack personal projects.',
     },
     contact: {
       title: 'Contact',
       description:
-        'Contact Nguyễn Quốc Huy — frontend developer available for React, React Native, and fullstack work.',
+        'Contact Nguyễn Quốc Huy — mobile developer available for React, React Native, and fullstack work.',
       social:
-        'Frontend developer available for React, React Native, and fullstack work. Get in touch.',
+        'Mobile developer available for React, React Native, and fullstack work. Get in touch.',
     },
-    jobTitle: 'Frontend Developer',
-    ogAlt: 'Nguyễn Quốc Huy — Frontend Developer',
+    jobTitle: 'Mobile Developer (React Native)',
+    ogAlt: 'Nguyễn Quốc Huy — Mobile Developer (React Native)',
   },
   layout: {
     skipLink: 'Skip to content',
@@ -85,7 +85,7 @@ export const en = {
       {
         title: 'Fullstack & Internship',
         description:
-          'Platinum Technology (2025): social, ops, events, commerce. JinStore: React + Node.js + VNPay from scratch.',
+          'Platinum Technology (2025): social, ops, events, internal chat. JinStore: React + Node.js + VNPay from scratch.',
       },
     ],
     projectsEyebrow: 'Selected work',
@@ -98,7 +98,7 @@ export const en = {
   about: {
     panelLabel: 'Profile summary',
     signals: [
-      { title: 'Nguyễn Quốc Huy', description: 'Frontend Developer — Huế, Vietnam.' },
+      { title: 'Nguyễn Quốc Huy', description: 'Mobile Developer (React Native) — Huế, Vietnam.' },
       { title: 'AntBuddy JSC', description: 'Frontend Developer, 03/2026 – present.' },
       {
         title: 'Platinum Technology',
@@ -106,10 +106,10 @@ export const en = {
       },
     ],
     eyebrow: 'About',
-    heading: 'Frontend developer.',
+    heading: 'Mobile developer.',
     paragraphs: [
       'I build React and React Native features that sit close to real product logic — authentication, media upload, realtime sync, VoIP calls, push notifications, omni-channel chat, and payment flows.',
-      'Currently at AntBuddy JSC working on a production CRM mobile app (iOS + Android) and an E2E automation test framework for Zalo OA. Previously at Platinum Technology (2025) shipping across four product domains: social, operations, events, and commerce.',
+      'Currently at AntBuddy JSC working on a production CRM mobile app (iOS + Android) and an E2E automation test framework for Zalo OA. Previously at Platinum Technology (2025) shipping across four product domains: social, operations, events, and internal chat.',
     ],
     focusTitle: 'What I focus on',
     focus: [
@@ -125,7 +125,7 @@ export const en = {
     degree: 'Software Engineering',
     school: 'Hue University of Sciences',
     years: '2021–2025',
-    detail: "Bachelor's degree, good classification (Khá). GPA: 2.79 / 4.0.",
+    detail: "Bachelor's degree, good classification (Khá).",
   },
   portfolio: {
     eyebrow: 'Projects',
@@ -171,7 +171,6 @@ export const en = {
     channels: {
       email: 'Email',
       github: 'GitHub',
-      facebook: 'Facebook',
       bitbucket: 'Bitbucket',
       bitbucketValue: 'JinStore workspace',
       location: 'Location',

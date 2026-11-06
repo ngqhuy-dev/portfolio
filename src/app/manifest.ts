@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 // Relative paths resolve against the manifest URL, so they follow the deploy sub-path.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Nguyễn Quốc Huy — Frontend Developer',
+    name: 'Nguyễn Quốc Huy — Mobile Developer (React Native)',
     short_name: 'Quốc Huy',
     start_url: './',
     display: 'browser',
