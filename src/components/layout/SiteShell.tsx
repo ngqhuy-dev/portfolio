@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@/components/Analytics';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
@@ -43,6 +44,7 @@ export function SiteShell({ locale, children }: { locale: Locale; children: Reac
         </main>
         <Footer locale={locale} />
         {plausibleDomain && <Analytics domain={plausibleDomain} src={plausibleSrc} />}
+        <SpeedInsights />
       </body>
     </html>
   );
